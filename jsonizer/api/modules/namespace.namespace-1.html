@@ -1,0 +1,501 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Namespace | Jsonizer - v1.0.0</title>
+	<meta name="description" content="Documentation for Jsonizer - v1.0.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Jsonizer - v1.0.0</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Jsonizer - v1.0.0</a>
+				</li>
+				<li>
+					<a href="namespace.html">namespace</a>
+				</li>
+				<li>
+					<a href="namespace.namespace-1.html">Namespace</a>
+				</li>
+			</ul>
+			<h1>Namespace Namespace</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#hold-the-registry-of-classes" id="hold-the-registry-of-classes" style="color: inherit; text-decoration: none;">
+							<h2>Hold the registry of classes</h2>
+						</a>
+					</div>
+					<p>Each class has its own identity but in order <strong>to refer them</strong>
+					by name properly it is necessary to introduce namespaces.</p>
+					<p>A namespace is mandatory for example to refer 2 classes
+						with the same name, e.g. <code>Category</code> (of a product) and
+					<code>Category</code> (of a movie).</p>
+					<p>A namespace have to be unique within an application, therefore
+						classes that are designed to be exposed in a library should
+						be decorated with a universal unique namespace identifier,
+						e.g. <code>org.example.myApp</code>. Conversely, it is enough for
+						a standalone application to group subordinate classes
+					together using relative namespaces.</p>
+					<ul>
+						<li>using a universal unique namespace identifier :<pre><code><span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;org.example.myApp&#039;</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Foo</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">   </span><span style="color: #008000">// 👆 qualified name set to &#039;org.example.myApp.Foo&#039;</span>
+</code></pre>
+						</li>
+						<li>using relative namespaces :<pre><code><span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #001080">Product</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Category</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">   </span><span style="color: #008000">// 👆 qualified name set to &#039;Product.Category&#039;</span>
+</code></pre>
+						</li>
+						<li><pre><code><span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #001080">Movie</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Category</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">    </span><span style="color: #008000">// 👆 qualified name set to &#039;Movie.Category&#039;</span>
+</code></pre>
+						</li>
+					</ul>
+					<p>In the example above, even if an app imports 2 classes
+						with the same name <code>Product</code>, it is still possible to
+					relocate one (or both) of them :</p>
+					<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Product</span><span style="color: #000000"> </span><span style="color: #AF00DB">as</span><span style="color: #000000"> </span><span style="color: #001080">Product1</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;./myApp&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Product</span><span style="color: #000000"> </span><span style="color: #AF00DB">as</span><span style="color: #000000"> </span><span style="color: #001080">Product2</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;someLib&#039;</span><span style="color: #000000">;</span>
+<span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;org.example.myApp&#039;</span><span style="color: #000000">)(</span><span style="color: #001080">Product1</span><span style="color: #000000">)</span>
+<span style="color: #000000">    </span><span style="color: #008000">// qualified name               👆</span>
+<span style="color: #000000">    </span><span style="color: #008000">// set to &#039;org.example.myApp.Product&#039; </span>
+<span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;com.example.products&#039;</span><span style="color: #000000">)(</span><span style="color: #001080">Product2</span><span style="color: #000000">)</span>
+<span style="color: #000000">    </span><span style="color: #008000">// qualified name                  👆</span>
+<span style="color: #000000">    </span><span style="color: #008000">// set to &#039;com.example.products.Product&#039; </span>
+</code></pre>
+					<p>By transitivity, the <code>Category</code> is relocated to
+					<code>org.example.myApp.Product.Category</code></p>
+					<blockquote>
+						<p>ℹ️  This is unrelated to Typescript namespaces !</p>
+					</blockquote>
+					<a href="#code-splitting-lazy-loading" id="code-splitting-lazy-loading" style="color: inherit; text-decoration: none;">
+						<h2>Code splitting (lazy loading)</h2>
+					</a>
+					<p>Modern Javascript bundlers allow in some circumstances
+						to split the code in several files that will be loaded
+					on demand (client side).</p>
+					<p>Ensure that the code that do register each class is
+						visited before any registry lookup, otherwise you
+					might have mismatch lookups.</p>
+					<p>Typically, this can be done by importing them in the
+					app entry point.</p>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="namespace.namespace-1.html#_" class="tsd-kind-icon">$</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="namespace.namespace-1.html#registerclassbyqualifiedname" class="tsd-kind-icon">register<wbr>Class<wbr>ByQualified<wbr>Name</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="namespace.namespace-1.html#unregisterclass" class="tsd-kind-icon">unregister<wbr>Class</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter"><a href="namespace.namespace-1.html#getclass" class="tsd-kind-icon">get<wbr>Class</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="namespace.namespace-1.html#getqualifiedname" class="tsd-kind-icon">get<wbr>Qualified<wbr>Name</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="namespace.namespace-1.html#hasnamespace" class="tsd-kind-icon">has<wbr>Namespace</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="namespace.namespace-1.html#registerclassbyqualifiedname-1" class="tsd-kind-icon">register<wbr>Class<wbr>ByQualified<wbr>Name</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="namespace.namespace-1.html#unregisterclass-1" class="tsd-kind-icon">unregister<wbr>Class</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> $</h3>
+					<div class="tsd-signature tsd-kind-icon">$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="namespace.namespace-1.html#_" class="tsd-signature-type" data-tsd-kind="Variable">$</a><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/tree/master/lib/src/namespace.ts#L171">namespace.ts:171</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Metadata key.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="registerclassbyqualifiedname" class="tsd-anchor"></a>
+					<h3>register<wbr>Class<wbr>ByQualified<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">register<wbr>Class<wbr>ByQualified<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>qn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, target<span class="tsd-signature-symbol">: </span><a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-namespace">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>qn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, target<span class="tsd-signature-symbol">: </span><a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<a href="#for-advanced-usage-only" id="for-advanced-usage-only" style="color: inherit; text-decoration: none;">
+													<h2>For advanced usage only</h2>
+												</a>
+											</div>
+											<p>Do not use : use instead <code>Namespace(theClass)</code>.</p>
+											<p>Force to register a class in the registry by a given name.</p>
+											<p>Should never be used, except for classes that would be managed
+											dynamically with a life-span controlled by the user.</p>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>qn: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>target: <a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="unregisterclass" class="tsd-anchor"></a>
+					<h3>unregister<wbr>Class</h3>
+					<div class="tsd-signature tsd-kind-icon">unregister<wbr>Class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-namespace">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<a href="#for-advanced-usage-only" id="for-advanced-usage-only" style="color: inherit; text-decoration: none;">
+													<h2>For advanced usage only</h2>
+												</a>
+											</div>
+											<p>Unregisters a class from the registry.</p>
+											<p>Should never be used, except for classes that would be managed
+											dynamically with a life-span controlled by the user.</p>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>target: <a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="getclass" class="tsd-anchor"></a>
+					<h3>get<wbr>Class</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Class&lt;T&gt;<span class="tsd-signature-symbol">(</span>qname<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/tree/master/lib/src/namespace.ts#L208">namespace.ts:208</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Lookup for a class by name</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p><code>Name conflict</code> error when several classes are found :
+										can be fix by setting 2 different namespaces to the classes.</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p><code>Missing name</code> error when the class is not found in the registry.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>qname: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The qualified name of the class.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The class bound to that name.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getqualifiedname" class="tsd-anchor"></a>
+					<h3>get<wbr>Qualified<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Qualified<wbr>Name<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/tree/master/lib/src/namespace.ts#L188">namespace.ts:188</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Return the qualified name of a class.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The target class.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>Its name preceded by its namespace, if any.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="hasnamespace" class="tsd-anchor"></a>
+					<h3>has<wbr>Namespace</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Namespace<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/tree/master/lib/src/namespace.ts#L178">namespace.ts:178</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Indicates whether a class has a namespace or not.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The target class.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="registerclassbyqualifiedname-1" class="tsd-anchor"></a>
+					<h3>register<wbr>Class<wbr>ByQualified<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Class<wbr>ByQualified<wbr>Name<span class="tsd-signature-symbol">(</span>qn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, target<span class="tsd-signature-symbol">: </span><a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/tree/master/lib/src/namespace.ts#L247">namespace.ts:247</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<a href="#for-advanced-usage-only" id="for-advanced-usage-only" style="color: inherit; text-decoration: none;">
+										<h2>For advanced usage only</h2>
+									</a>
+								</div>
+								<p>Do not use : use instead <code>Namespace(theClass)</code>.</p>
+								<p>Force to register a class in the registry by a given name.</p>
+								<p>Should never be used, except for classes that would be managed
+								dynamically with a life-span controlled by the user.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>qn: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>target: <a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="unregisterclass-1" class="tsd-anchor"></a>
+					<h3>unregister<wbr>Class</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">unregister<wbr>Class<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/tree/master/lib/src/namespace.ts#L235">namespace.ts:235</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<a href="#for-advanced-usage-only" id="for-advanced-usage-only" style="color: inherit; text-decoration: none;">
+										<h2>For advanced usage only</h2>
+									</a>
+								</div>
+								<p>Unregisters a class from the registry.</p>
+								<p>Should never be used, except for classes that would be managed
+								dynamically with a life-span controlled by the user.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <a href="namespace.html#class" class="tsd-signature-type" data-tsd-kind="Type alias">Class</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="namespace.namespace-1.html#_" class="tsd-kind-icon">$</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="namespace.namespace-1.html#registerclassbyqualifiedname" class="tsd-kind-icon">register<wbr>Class<wbr>ByQualified<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="namespace.namespace-1.html#unregisterclass" class="tsd-kind-icon">unregister<wbr>Class</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="namespace.namespace-1.html#getclass" class="tsd-kind-icon">get<wbr>Class</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="namespace.namespace-1.html#getqualifiedname" class="tsd-kind-icon">get<wbr>Qualified<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="namespace.namespace-1.html#hasnamespace" class="tsd-kind-icon">has<wbr>Namespace</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="namespace.namespace-1.html#registerclassbyqualifiedname-1" class="tsd-kind-icon">register<wbr>Class<wbr>ByQualified<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="namespace.namespace-1.html#unregisterclass-1" class="tsd-kind-icon">unregister<wbr>Class</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
