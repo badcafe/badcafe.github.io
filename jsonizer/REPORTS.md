@@ -73,7 +73,67 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/basic.test.ts` **1.121s** 
+### ✅ `/test/reviver.test.ts` **2.152s** 
+
+
+#### 🔹 Operations with Revivers
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Revive object | stringify reviver |
+| ✅ | Revive object | reviver from JSON |
+| ✅ | Revive object | reviver from replacer |
+| ✅ | Revive class | stringify reviver |
+| ✅ | Revive class | reviver from JSON |
+| ✅ | Revive class | reviver from replacer |
+| ✅ | Revive class with namespace | stringify reviver |
+| ✅ | Revive class with namespace | reviver from JSON |
+| ✅ | Revive class with namespace | reviver from replacer |
+| ✅ | Nested reviver | stringify reviver |
+
+
+#### 🔹 Revivers generation
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Arrays | single item |
+| ✅ | Arrays | 2 items |
+| ✅ | Arrays | 3 items |
+| ✅ | Arrays | n items |
+| ✅ | Deep struct in arrays | single item |
+| ✅ | Deep struct in arrays | 2 items |
+| ✅ | Deep struct in arrays | 3 items |
+| ✅ | Deep struct in arrays | n items |
+| ✅ | Tuple | single mapping |
+| ✅ | Range | [1-2] |
+| ✅ | Range | [1-3] |
+| ✅ | Range | [1-10] |
+| ✅ | Tuple | Mix |
+| ✅ | Ranges | with RegExp inside |
+| ✅ | Submapper | can merge |
+| ✅ | Submapper | with primitive inside |
+| ✅ | Submapper | with primitive before |
+| ✅ | Submapper | with primitive after |
+| ✅ | Merge reviver | Missing mapping after |
+| ✅ | Merge reviver | Missing mapping before |
+| ✅ | Merge reviver | Disjoints mappings |
+
+
+
+### ✅ `/test/case.rebolon.test.ts` **0.267s** 
+
+
+#### 🔹 Use case (taken from another tool)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
+
+
+
+### ✅ `/test/basic.test.ts` **2.397s** 
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -162,7 +222,18 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/readme.test.ts` **0.226s** 
+### ✅ `/test/types.test.ts` **0.203s** 
+
+
+#### 🔹 Advanced Jsonizer types
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Code | Must compile |
+
+
+
+### ✅ `/test/readme.test.ts` **2.701s** 
 
 
 #### 🔹 README.md examples
@@ -205,67 +276,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/reviver.test.ts` **0.16s** 
-
-
-#### 🔹 Operations with Revivers
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Revive object | stringify reviver |
-| ✅ | Revive object | reviver from JSON |
-| ✅ | Revive object | reviver from replacer |
-| ✅ | Revive class | stringify reviver |
-| ✅ | Revive class | reviver from JSON |
-| ✅ | Revive class | reviver from replacer |
-| ✅ | Revive class with namespace | stringify reviver |
-| ✅ | Revive class with namespace | reviver from JSON |
-| ✅ | Revive class with namespace | reviver from replacer |
-| ✅ | Nested reviver | stringify reviver |
-
-
-#### 🔹 Revivers generation
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Arrays | single item |
-| ✅ | Arrays | 2 items |
-| ✅ | Arrays | 3 items |
-| ✅ | Arrays | n items |
-| ✅ | Deep struct in arrays | single item |
-| ✅ | Deep struct in arrays | 2 items |
-| ✅ | Deep struct in arrays | 3 items |
-| ✅ | Deep struct in arrays | n items |
-| ✅ | Tuple | single mapping |
-| ✅ | Range | [1-2] |
-| ✅ | Range | [1-3] |
-| ✅ | Range | [1-10] |
-| ✅ | Tuple | Mix |
-| ✅ | Ranges | with RegExp inside |
-| ✅ | Submapper | can merge |
-| ✅ | Submapper | with primitive inside |
-| ✅ | Submapper | with primitive before |
-| ✅ | Submapper | with primitive after |
-| ✅ | Merge reviver | Missing mapping after |
-| ✅ | Merge reviver | Missing mapping before |
-| ✅ | Merge reviver | Disjoints mappings |
-
-
-
-### ✅ `/test/case.rebolon.test.ts` **0.116s** 
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
-
-
-
-### ✅ `/test/case.emmkimme.test.ts` **0.108s** 
+### ✅ `/test/case.emmkimme.test.ts` **0.298s** 
 
 
 #### 🔹 Use case (taken from another tool)
@@ -274,17 +285,6 @@ var myChart = new Chart(ctx, {
 | ------ | ----- | ---- |
 | ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
 | ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
-
-
-
-### ✅ `/test/types.test.ts` **0.094s** 
-
-
-#### 🔹 Advanced Jsonizer types
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Code | Must compile |
 
 
 
