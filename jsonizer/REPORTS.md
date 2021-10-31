@@ -73,7 +73,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/basic.test.ts` **0.635s** 
+### ✅ `/test/basic.test.ts` **0.892s** 
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -205,7 +205,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/reviver.test.ts` **0.12s** 
+### ✅ `/test/reviver.test.ts` **0.125s** 
 
 
 #### 🔹 Operations with Revivers
@@ -252,7 +252,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/case.rebolon.test.ts` **0.073s** 
+### ✅ `/test/case.rebolon.test.ts` **0.088s** 
 
 
 #### 🔹 Use case (taken from another tool)
@@ -265,7 +265,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/case.emmkimme.test.ts` **0.06s** 
+### ✅ `/test/case.emmkimme.test.ts` **0.072s** 
 
 
 #### 🔹 Use case (taken from another tool)
@@ -277,7 +277,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/types.test.ts` **0.058s** 
+### ✅ `/test/types.test.ts` **0.07s** 
 
 
 #### 🔹 Advanced Jsonizer types
