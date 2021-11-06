@@ -12,12 +12,12 @@
 
 | Files | 5 | |
 | ----- | -: | - |
-| Lines of code | 964 | (w/o comments) |
-| Comments | 797 | (+ 119 with code) |
+| Lines of code | 966 | (w/o comments) |
+| Comments | 798 | (+ 119 with code) |
 | Empty lines | 108 | |
-| **Total lines** | **1869** | (w/o tests) |
+| **Total lines** | **1872** | (w/o tests) |
 | TODO | 1 | lines |
-| Tests | 2020 | (w/o comments) |
+| Tests | 2067 | (w/o comments) |
 
 <script>
 var ctx = document.getElementById('metricsChart');
@@ -27,10 +27,10 @@ var myChart = new Chart(ctx, {
         labels: ['Code', 'Comments', 'Empty', 'Tests'],
         datasets: [{
             label: 'Metrics',
-            data: [964, 
-                797, 
+            data: [966, 
+                798, 
                 108,
-                2020
+                2067
             ],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -65,15 +65,71 @@ var myChart = new Chart(ctx, {
 |   | Tests suites | Tests |
 | - | ------------ | ----- |
 | ❌ &nbsp; Failed | 0 | 0 |
-| ✅ &nbsp; Passed | 6 | 131 |
+| ✅ &nbsp; Passed | 7 | 134 |
 | ✴ &nbsp; Pending | 0 | 0 |
 | ☢ &nbsp; Error | 0 | |
-| **Total** | **6** | **131** |
+| **Total** | **7** | **134** |
 
 
 
 
-### ✅ `/test/reviver.test.ts` **2.152s** 
+### ✅ `/test/errors.test.ts` **1.387s** 
+
+
+#### 🔹 Errors
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | reviving | Error |
+| ✅ | reviving | TypeError |
+| ✅ | reviving | MyError |
+
+
+
+### ✅ `/test/readme.test.ts` **1.728s** 
+
+
+#### 🔹 README.md examples
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Overview | Invariants |
+| ✅ | Overview | w/o Jsonizer |
+| ✅ | Overview | with Jsonizer |
+| ✅ | Revivers mappings | Objects |
+| ✅ | Revivers mappings | Arrays |
+| ✅ | Revivers mappings | Nested mapping |
+| ✅ | Revivers mappings | Tuples |
+| ✅ | Classes | Custom classes |
+| ✅ | Classes | Self apply |
+| ✅ | Classes | Self assign |
+| ✅ | Classes | No @ decorator |
+| ✅ | Classes | Class with nested JSON |
+| ✅ | Classes | Class with nested class |
+| ✅ | Classes | Pass through (Identity) |
+| ✅ | Classes | The `.` (self) builder |
+| ✅ | DTO | `toJSON()` and DTO |
+| ✅ | DTO | Types ambivalence |
+| ✅ | DTO | Mappers for Sub-DTO |
+| ✅ | DTO | Mappers for Sub-DTO (alt) |
+| ✅ | DTO | Reviving third-party classes and built-in classes |
+| ✅ | DTO | `[Jsonizer.toJSON]` |
+| ✅ | Ranges and Regexp | Regexp |
+| ✅ | Ranges and Regexp | Regexp (alt) |
+| ✅ | Ranges and Regexp | Range |
+| ✅ | Namespaces | Jsonizer namespaces |
+| ✅ | Namespaces | Jsonizer namespaces (Summary) |
+| ✅ | Reviving parsed data | Revive after parsing |
+| ✅ | Reviver generation 🔹 Replacer | from class |
+| ✅ | Reviver generation 🔹 Replacer | from array |
+| ✅ | Reviver generation 🔹 Replacer | from nested structure |
+| ✅ | Reviver generation 🔹 Subreviver | Array |
+| ✅ | Reviver generation 🔹 Subreviver | Item |
+| ✅ | Reviver generation | Dynamic reviver |
+
+
+
+### ✅ `/test/reviver.test.ts` **0.466s** 
 
 
 #### 🔹 Operations with Revivers
@@ -120,20 +176,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/case.rebolon.test.ts` **0.267s** 
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
-
-
-
-### ✅ `/test/basic.test.ts` **2.397s** 
+### ✅ `/test/basic.test.ts` **1.943s** 
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -222,61 +265,20 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/types.test.ts` **0.203s** 
+### ✅ `/test/case.rebolon.test.ts` **0.216s** 
 
 
-#### 🔹 Advanced Jsonizer types
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Code | Must compile |
-
-
-
-### ✅ `/test/readme.test.ts` **2.701s** 
-
-
-#### 🔹 README.md examples
+#### 🔹 Use case (taken from another tool)
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | Overview | Invariants |
-| ✅ | Overview | w/o Jsonizer |
-| ✅ | Overview | with Jsonizer |
-| ✅ | Revivers mappings | Objects |
-| ✅ | Revivers mappings | Arrays |
-| ✅ | Revivers mappings | Nested mapping |
-| ✅ | Revivers mappings | Tuples |
-| ✅ | Classes | Custom classes |
-| ✅ | Classes | Self apply |
-| ✅ | Classes | Self assign |
-| ✅ | Classes | No @ decorator |
-| ✅ | Classes | Class with nested JSON |
-| ✅ | Classes | Class with nested class |
-| ✅ | Classes | Pass through (Identity) |
-| ✅ | Classes | The `.` (self) builder |
-| ✅ | DTO | `toJSON()` and DTO |
-| ✅ | DTO | Types ambivalence |
-| ✅ | DTO | Mappers for Sub-DTO |
-| ✅ | DTO | Mappers for Sub-DTO (alt) |
-| ✅ | DTO | Reviving third-party classes and built-in classes |
-| ✅ | DTO | `[Jsonizer.toJSON]` |
-| ✅ | Ranges and Regexp | Regexp |
-| ✅ | Ranges and Regexp | Regexp (alt) |
-| ✅ | Ranges and Regexp | Range |
-| ✅ | Namespaces | Jsonizer namespaces |
-| ✅ | Namespaces | Jsonizer namespaces (Summary) |
-| ✅ | Reviving parsed data | Revive after parsing |
-| ✅ | Reviver generation 🔹 Replacer | from class |
-| ✅ | Reviver generation 🔹 Replacer | from array |
-| ✅ | Reviver generation 🔹 Replacer | from nested structure |
-| ✅ | Reviver generation 🔹 Subreviver | Array |
-| ✅ | Reviver generation 🔹 Subreviver | Item |
-| ✅ | Reviver generation | Dynamic reviver |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
 
 
 
-### ✅ `/test/case.emmkimme.test.ts` **0.298s** 
+### ✅ `/test/case.emmkimme.test.ts` **0.186s** 
 
 
 #### 🔹 Use case (taken from another tool)
@@ -285,6 +287,17 @@ var myChart = new Chart(ctx, {
 | ------ | ----- | ---- |
 | ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
 | ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
+
+
+
+### ✅ `/test/types.test.ts` **0.119s** 
+
+
+#### 🔹 Advanced Jsonizer types
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Code | Must compile |
 
 
 
