@@ -65,6 +65,84 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#hold-the-registry-of-classes" id="hold-the-registry-of-classes" style="color: inherit; text-decoration: none;">
+							<h2>Hold the registry of classes</h2>
+						</a>
+					</div>
+					<p>The purpose of Jsonizer&#39;s namespaces is to let classes <strong>knowing</strong> their
+					fully qualified name.</p>
+					<blockquote>
+						<p>Javascript and Typescript can group items together under namespaces,
+							which lead roughly to a hierarchy of objects, but the items themselves
+							when they are classes don&#39;t have the knowledge of the hierarchy they
+						belong to.</p>
+					</blockquote>
+					<p>Each class has its own identity but in order <strong>to refer them</strong>
+					by name properly it is necessary to introduce namespaces.</p>
+					<p>A namespace is mandatory for example to refer 2 classes
+						with the same name, e.g. <code>Category</code> (of a product) and
+					<code>Category</code> (of a movie).</p>
+					<p>A namespace have to be unique within an application, therefore
+						classes that are designed to be exposed in a library should
+						be decorated with a universal unique namespace identifier,
+						e.g. <code>org.example.myApp</code>. Conversely, it is enough for
+						a standalone application to group subordinate classes
+					together using relative namespaces.</p>
+					<ul>
+						<li>using a universal unique namespace identifier :<pre><code><span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;org.example.myApp&#039;</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Foo</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">   </span><span style="color: #008000">// 👆 qualified name set to &#039;org.example.myApp.Foo&#039;</span>
+</code></pre>
+						</li>
+						<li>using relative namespaces :<pre><code><span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #001080">Product</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Category</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">   </span><span style="color: #008000">// 👆 qualified name set to &#039;Product.Category&#039;</span>
+</code></pre>
+						</li>
+						<li><pre><code><span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #001080">Movie</span><span style="color: #000000">)</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Category</span><span style="color: #000000"> {}</span>
+<span style="color: #000000">    </span><span style="color: #008000">// 👆 qualified name set to &#039;Movie.Category&#039;</span>
+</code></pre>
+						</li>
+					</ul>
+					<p>In the example above, even if an app imports 2 classes
+						with the same name <code>Product</code>, it is still possible to
+					relocate one (or both) of them :</p>
+					<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Product</span><span style="color: #000000"> </span><span style="color: #AF00DB">as</span><span style="color: #000000"> </span><span style="color: #001080">Product1</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;./myApp&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Product</span><span style="color: #000000"> </span><span style="color: #AF00DB">as</span><span style="color: #000000"> </span><span style="color: #001080">Product2</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;someLib&#039;</span><span style="color: #000000">;</span>
+<span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;org.example.myApp&#039;</span><span style="color: #000000">)(</span><span style="color: #001080">Product1</span><span style="color: #000000">)</span>
+<span style="color: #000000">    </span><span style="color: #008000">// qualified name               👆</span>
+<span style="color: #000000">    </span><span style="color: #008000">// set to &#039;org.example.myApp.Product&#039; </span>
+<span style="color: #795E26">ⓐNamespace</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;com.example.products&#039;</span><span style="color: #000000">)(</span><span style="color: #001080">Product2</span><span style="color: #000000">)</span>
+<span style="color: #000000">    </span><span style="color: #008000">// qualified name                  👆</span>
+<span style="color: #000000">    </span><span style="color: #008000">// set to &#039;com.example.products.Product&#039; </span>
+</code></pre>
+					<p>By transitivity, the <code>Category</code> is relocated to
+					<code>org.example.myApp.Product.Category</code></p>
+					<blockquote>
+						<p>ℹ️  This is unrelated to Typescript namespaces !</p>
+					</blockquote>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=namespaces">User guide</a></p>
+							<a href="#code-splitting-lazy-loading" id="code-splitting-lazy-loading" style="color: inherit; text-decoration: none;">
+								<h2>Code splitting (lazy loading)</h2>
+							</a>
+							<p>Modern Javascript bundlers allow in some circumstances
+								to split the code in several files that will be loaded
+							on demand (client side).</p>
+							<p>Ensure that the code that do register each class is
+								visited before any registry lookup, otherwise you
+							might have mismatch lookups.</p>
+							<p>Typically, this can be done by importing them in the
+							app entry point.</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -95,21 +173,32 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="class" class="tsd-anchor"></a>
 					<h3>Class</h3>
-					<div class="tsd-signature tsd-kind-icon">Class&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<div class="tsd-signature tsd-kind-icon">Class&lt;Type, Args&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/namespace.ts#L6">namespace.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/namespace.ts#L90">namespace.ts:90</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Any class</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>paramtype</dt>
+							<dd><p>Type - The class type</p>
+							</dd>
+							<dt>paramtype</dt>
+							<dd><p>Args - The arguments of the constructor</p>
+							</dd>
+						</dl>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
 					<ul class="tsd-type-parameters">
 						<li>
-							<h4>T = <span class="tsd-signature-type">any</span></h4>
+							<h4>Type = <span class="tsd-signature-type">any</span></h4>
+						</li>
+						<li>
+							<h4>Args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span> = <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 					<div class="tsd-type-declaration">
@@ -131,7 +220,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/namespace.ts#L62">namespace.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/namespace.ts#L150">namespace.ts:150</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -186,6 +275,17 @@
 <span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Corge</span><span style="color: #000000"> {}</span>
 <span style="color: #000000">    </span><span style="color: #008000">// 👆 qualified name set to &#039;Corge&#039;</span>
 </code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="namespace.namespace-1.html#getclass">Namespace.getClass</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="namespace.namespace-1.html#getqualifiedname">Namespace.getQualifiedName</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=namespaces">User guide</a></p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">

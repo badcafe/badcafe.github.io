@@ -77,6 +77,11 @@
 						<p>A matcher is either a regular expression for matching properties
 						of an object, or a range for matching indexes of an array.</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=ranges-and-regexp">User guide</a></p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -109,13 +114,21 @@
 					<div class="tsd-signature tsd-kind-icon">Range&lt;Delim&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">`</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">`</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L218">jsonizer.ts:218</a></li>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L243">jsonizer.ts:243</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A type for arrays range , e.g. <code>&#39;8-12&#39;</code></p>
+							<p>A type for arrays range , e.g. <code>&#39;8-12&#39;</code> (included)</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="jsonizer.mappers.jokers.html">Jokers</a></p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=ranges">User guide</a></p>
+							</dd>
+						</dl>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
 					<ul class="tsd-type-parameters">
@@ -130,13 +143,25 @@
 					<div class="tsd-signature tsd-kind-icon">Regexp&lt;Delim&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">`</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">`</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L213">jsonizer.ts:213</a></li>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L235">jsonizer.ts:235</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A type for Regexp, e.g. <code>&#39;/\\w+Date/&#39;</code></p>
+							<blockquote>
+								<p>RegExp keys are represented as strings, which may introduce additional
+								escapes, e.g. <code>/\w+Date/.toString()</code> gives <code>&#39;/\\w+Date/&#39;</code></p>
+							</blockquote>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="jsonizer.mappers.jokers.html">Jokers</a></p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=regexp">User guide</a></p>
+							</dd>
+						</dl>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
 					<ul class="tsd-type-parameters">
@@ -158,7 +183,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L229">jsonizer.ts:229</a></li>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L254">jsonizer.ts:254</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -199,13 +224,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L265">jsonizer.ts:265</a></li>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L294">jsonizer.ts:294</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Indicates whether a key is a range, e.g. <code>&#39;8-12&#39;</code></p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=ranges">User guide</a></p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -230,13 +260,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L258">jsonizer.ts:258</a></li>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L285">jsonizer.ts:285</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Indicates whether a key is a Regexp, e.g. <code>&#39;/\\w+Date/&#39;</code></p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=regexp">User guide</a></p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">

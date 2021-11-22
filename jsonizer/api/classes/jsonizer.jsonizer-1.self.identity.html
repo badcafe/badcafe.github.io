@@ -82,6 +82,17 @@
 							every value, except some of them that would be mapped
 						to the identity.</p>
 					</div>
+					<pre><code class="language-typescript"><span style="color: #000000">@</span><span style="color: #795E26">Reviver</span><span style="color: #000000">&lt;</span><span style="color: #267F99">Hobby</span><span style="color: #000000">&gt;({</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;.&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #001080">Jsonizer</span><span style="color: #000000">.</span><span style="color: #001080">Self</span><span style="color: #000000">.</span><span style="color: #795E26">apply</span><span style="color: #000000">(</span><span style="color: #001080">Hobby</span><span style="color: #000000">),</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;*&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000"> </span><span style="color: #008000">// 👈 matches any field...</span>
+<span style="color: #000000">    </span><span style="color: #001080">hobby</span><span style="color: #000000">: </span><span style="color: #001080">Jsonizer</span><span style="color: #000000">.</span><span style="color: #001080">Self</span><span style="color: #000000">.</span><span style="color: #001080">Identity</span><span style="color: #000000"> </span><span style="color: #008000">// 👈  ...except &#039;hobby&#039;, kept unchanged</span>
+<span style="color: #000000">})</span>
+</code></pre>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=pass-through-identity">User guide</a></p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -91,36 +102,6 @@
 						<span class="target">Identity</span>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="jsonizer.jsonizer-1.self.identity.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Identity<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="jsonizer.jsonizer-1.self.identity.html" class="tsd-signature-type" data-tsd-kind="Class">Identity</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="jsonizer.jsonizer-1.self.identity.html" class="tsd-signature-type" data-tsd-kind="Class">Identity</a></h4>
-						</li>
-					</ul>
-				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -137,11 +118,6 @@
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-namespace">
 						<a href="jsonizer.jsonizer-1.self.identity.html" class="tsd-kind-icon">Identity</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="jsonizer.jsonizer-1.self.identity.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
@@ -168,9 +144,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 			</ul>
 		</div>
 	</div>

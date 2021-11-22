@@ -65,6 +65,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p><a href="https://badcafe.github.io/jsonizer">User guide</a></p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -105,26 +112,26 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="mappers-1" class="tsd-anchor"></a>
 					<h3>Mappers</h3>
-					<div class="tsd-signature tsd-kind-icon">Mappers&lt;Target, Source, Match, Any, Self, Delim&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><a href="jsonizer.reviver.html#reference" class="tsd-signature-type" data-tsd-kind="Type alias">Reference</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><a href="jsonizer.mappers.jokers.html#custom" class="tsd-signature-type" data-tsd-kind="Type alias">Custom</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Target</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">infer </span> Item<span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Match</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><a href="jsonizer.reviver.html#reference" class="tsd-signature-type" data-tsd-kind="Type alias">Reference</a><span class="tsd-signature-symbol"> | </span><a href="jsonizer.mappers.html" class="tsd-signature-type" data-tsd-kind="Namespace">Mappers</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Item</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><a href="jsonizer.mappers.jokers.html#custom" class="tsd-signature-type" data-tsd-kind="Type alias">Custom</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> ? </span><a href="jsonizer.mappers.jokers.html#custom" class="tsd-signature-type" data-tsd-kind="Type alias">Custom</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><a href="jsonizer.reviver.html#reference" class="tsd-signature-type" data-tsd-kind="Type alias">Reference</a><span class="tsd-signature-symbol"> | </span><a href="jsonizer.mappers.html" class="tsd-signature-type" data-tsd-kind="Namespace">Mappers</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Match</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><a href="jsonizer.reviver.html#reference" class="tsd-signature-type" data-tsd-kind="Type alias">Reference</a><span class="tsd-signature-symbol"> | </span><a href="jsonizer.mappers.html" class="tsd-signature-type" data-tsd-kind="Namespace">Mappers</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><a href="jsonizer.mappers.jokers.html#custom" class="tsd-signature-type" data-tsd-kind="Type alias">Custom</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+					<div class="tsd-signature tsd-kind-icon">Mappers&lt;Target, Source, Match, Any, Self, Delim&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Reviver.Reference</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><a href="jsonizer.mappers.jokers.html#custom" class="tsd-signature-type" data-tsd-kind="Type alias">Custom</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Target</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">infer </span> Item<span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Match</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Reviver.Reference</span><span class="tsd-signature-symbol"> | </span><a href="jsonizer.mappers.html" class="tsd-signature-type" data-tsd-kind="Namespace">Mappers</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Item</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><a href="jsonizer.mappers.jokers.html#custom" class="tsd-signature-type" data-tsd-kind="Type alias">Custom</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> ? </span><a href="jsonizer.mappers.jokers.html#custom" class="tsd-signature-type" data-tsd-kind="Type alias">Custom</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Reviver.Reference</span><span class="tsd-signature-symbol"> | </span><a href="jsonizer.mappers.html" class="tsd-signature-type" data-tsd-kind="Namespace">Mappers</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">key</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Match</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Reviver.Reference</span><span class="tsd-signature-symbol"> | </span><a href="jsonizer.mappers.html" class="tsd-signature-type" data-tsd-kind="Namespace">Mappers</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><a href="jsonizer.mappers.jokers.html#custom" class="tsd-signature-type" data-tsd-kind="Type alias">Custom</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L91">jsonizer.ts:91</a></li>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L101">jsonizer.ts:101</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>An object litteral that describe the mappers of a class, an array,
-							or a data structure.</p>
+							<p>A plain object that describes the mappers of a class, an array,
+							a tuple, or a data structure.</p>
 						</div>
-						<p>The <code>Mappers</code> object is the counterpart inert structure of a <code>Reviver</code>
-						(which is a function).</p>
+						<p>The <code>Mappers</code> object is the counterpart inert structure of the
+						<a href="#reviver-1"><code>Reviver</code> type</a> (which is a function).</p>
 						<a href="#example" id="example" style="color: inherit; text-decoration: none;">
 							<h2>Example</h2>
 						</a>
 						<pre><code><span style="color: #008000">// some class</span>
 <span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Thread</span><span style="color: #000000"> {</span>
 <span style="color: #000000">     </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span>
-<span style="color: #000000">         </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">creationDate</span><span style="color: #000000">: </span><span style="color: #267F99">Date</span><span style="color: #000000">, </span><span style="color: #008000">// built-in javascript Date</span>
+<span style="color: #000000">         </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">date</span><span style="color: #000000">: </span><span style="color: #267F99">Date</span><span style="color: #000000">, </span><span style="color: #008000">// built-in javascript Date</span>
 <span style="color: #000000">         </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">label</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
 <span style="color: #000000">         </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">comments</span><span style="color: #000000">: </span><span style="color: #267F99">Comment</span><span style="color: #000000">[] </span><span style="color: #008000">// another custom class</span>
 <span style="color: #000000">     )</span>
@@ -134,8 +141,8 @@
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">threadMappers</span><span style="color: #000000">: </span><span style="color: #267F99">Mappers</span><span style="color: #000000">&lt;</span><span style="color: #267F99">Thread</span><span style="color: #000000">&gt; = {</span>
 <span style="color: #000000">   </span><span style="color: #008000">//👇 the &quot;Self&quot; entry &#039;.&#039; indicates how to create a new instance</span>
 <span style="color: #000000">     </span><span style="color: #A31515">&#039;.&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> ({</span><span style="color: #001080">creationDate</span><span style="color: #000000">, </span><span style="color: #001080">label</span><span style="color: #000000">, </span><span style="color: #001080">comments</span><span style="color: #000000">}) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Thread</span><span style="color: #000000">(</span><span style="color: #001080">creationDate</span><span style="color: #000000">, </span><span style="color: #001080">label</span><span style="color: #000000">, </span><span style="color: #001080">comments</span><span style="color: #000000">)</span>
-<span style="color: #000000">   </span><span style="color: #008000">//👇 other entries</span>
-<span style="color: #000000">     </span><span style="color: #001080">creationDate</span><span style="color: #000000">: </span><span style="color: #267F99">Date</span><span style="color: #000000"> </span><span style="color: #008000">// 👈 delegate to the built-in Date mappers</span>
+<span style="color: #000000">   </span><span style="color: #008000">//👇 field mappers</span>
+<span style="color: #000000">     </span><span style="color: #001080">date</span><span style="color: #000000">: </span><span style="color: #267F99">Date</span><span style="color: #000000"> </span><span style="color: #008000">// 👈 delegate to the built-in Date mappers</span>
 <span style="color: #000000">     </span><span style="color: #001080">comments</span><span style="color: #000000">: {</span>
 <span style="color: #000000">       </span><span style="color: #008000">//👇 the &quot;Any&quot; entry &#039;*&#039; matches any indices of the array</span>
 <span style="color: #000000">         </span><span style="color: #A31515">&#039;*&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #001080">Comment</span><span style="color: #000000"> </span><span style="color: #008000">// 👈 delegate to the custom Comment mappers</span>
@@ -144,16 +151,19 @@
 </code></pre>
 						<dl class="tsd-comment-tags">
 							<dt>see</dt>
-							<dd><p><a href="jsonizer.reviver.html">Reviver</a> To bind the mapper to the class</p>
+							<dd><p><a href="#reviver-2">Reviver()</a> To bind the mapper to the class</p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="jsonizer.jsonizer-1.html#reviver">Jsonizer.reviver</a> To create a reviver from the mapper</p>
 								<a href="#description" id="description" style="color: inherit; text-decoration: none;">
 									<h2>Description</h2>
 								</a>
 								<p>The mappers indicates how an object or array and each of its property or items has to be
 									converted (by default the properties or items are left as-is). An object property or
 								array item can also describe its own mappers and so-on.</p>
-								<p>The more often the properties of an object mapper are the same of those of the object,
-									or in case of an array mapper the indices in that array (which is helpful for mapping
-								tuples).</p>
+								<p>The more often (when Source and Target are the same) the properties of an object mapper
+									are the same of those of the object, or in case of an array mapper the indices in that
+								array (which is helpful for mapping tuples).</p>
 								<p>Some additional keys are available in the mapper :</p>
 								<ul>
 									<li><code>&#39;*&#39;</code> that catches every other properties or indices that don&#39;t have a mapping, which
@@ -167,6 +177,9 @@
 									<li><code>&#39;8-12&#39;</code> which is a range key that can be set only on mappers for arrays, in this
 									example, it matches indexes from 8 to 12 included.</li>
 								</ul>
+								<blockquote>
+									<p>Unlike all other keys, the <code>&#39;.&#39;</code> key is not a field mapper, but a builder function.</p>
+								</blockquote>
 								<a href="#built-in-mappers" id="built-in-mappers" style="color: inherit; text-decoration: none;">
 									<h3>Built-in mappers</h3>
 								</a>
@@ -204,6 +217,12 @@
 							<dt>see</dt>
 							<dd><p><a href="jsonizer.mappers.jokers.html">Jokers</a></p>
 							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=revivers-mappings">User guide - Revivers mappings</a></p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=dto">User guide - Data Transfer Object</a></p>
+							</dd>
 						</dl>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -234,7 +253,7 @@
 					<div class="tsd-signature tsd-kind-icon">Reviver&lt;Target&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Target</span><span class="tsd-signature-symbol">; </span><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Target</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L291">jsonizer.ts:291</a></li>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L324">jsonizer.ts:324</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -244,10 +263,21 @@
 						<p>It can be created :</p>
 						<ul>
 							<li>with <a href="jsonizer.jsonizer-1.html#reviver">Jsonizer.reviver</a>()</li>
-							<li>with <a href="jsonizer.reviver.html">Reviver</a> as a class decorator or a function</li>
-							<li>with a <a href="../interfaces/jsonizer.replacer.html">Replacer</a> created with <a href="jsonizer.jsonizer-1.html#replacer">Jsonizer.replacer</a>() after <code>JSON.stringify()</code></li>
+							<li>with <a href="#reviver-2">Reviver()</a> as a class decorator or a function</li>
+							<li>with a <a href="../interfaces/jsonizer.replacer.html">Replacer</a> created with <a href="jsonizer.jsonizer-1.html#replacer-1">Jsonizer.replacer</a>() after <code>JSON.stringify()</code></li>
 						</ul>
 						<p>Can also be invoked directly on a data structure to augment.</p>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=revivers-mappings">User guide - <code>Jsonizer.reviver()</code></a></p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=classes">User guide - Classes</a></p>
+							</dd>
+							<dt>see</dt>
+							<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=reviver-generation">User guide - Replacer</a></p>
+							</dd>
+						</dl>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
 					<ul class="tsd-type-parameters">
@@ -269,7 +299,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L379">jsonizer.ts:379</a></li>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L431">jsonizer.ts:431</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -277,6 +307,17 @@
 									<p>A class decorator that contains recipes to revive an instance from
 									its JSON representation.</p>
 								</div>
+								<pre><code class="language-typescript"><span style="color: #000000">@</span><span style="color: #795E26">Reviver</span><span style="color: #000000">&lt;</span><span style="color: #267F99">Person</span><span style="color: #000000">&gt;({ </span><span style="color: #008000">// 👈  bind the reviver to the class</span>
+<span style="color: #000000">   </span><span style="color: #A31515">&#039;.&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> ({</span><span style="color: #001080">name</span><span style="color: #000000">, </span><span style="color: #001080">birthDate</span><span style="color: #000000">}) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Person</span><span style="color: #000000">(</span><span style="color: #001080">name</span><span style="color: #000000">, </span><span style="color: #001080">birthDate</span><span style="color: #000000">), </span><span style="color: #008000">// 👈  instance builder</span>
+<span style="color: #000000">   </span><span style="color: #001080">birthDate:</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000"> </span><span style="color: #008000">// 👈  field mapper</span>
+<span style="color: #000000">})</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Person</span><span style="color: #000000"> {</span>
+<span style="color: #000000">   </span><span style="color: #0000FF">constructor</span><span style="color: #000000">( </span><span style="color: #008000">// all fields are passed as arguments to the constructor</span>
+<span style="color: #000000">       </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">name</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">,</span>
+<span style="color: #000000">       </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">birthDate</span><span style="color: #000000">: </span><span style="color: #267F99">Date</span>
+<span style="color: #000000">   ) {}</span>
+<span style="color: #000000">}</span>
+</code></pre>
 								<p>It contains mappers for reviving individual fields to specific instances and
 								a builder function to construct the final object from revived fields.</p>
 								<p>Basically, it performs the following tasks:</p>
@@ -291,6 +332,16 @@
 									</dd>
 									<dt>paramtype</dt>
 									<dd><p>Source - The JSON representation of <code>Target</code> is by default the structural <code>Target</code> itself</p>
+									</dd>
+									<dt>paramtype</dt>
+									<dd><p>Match - An array of Regexp matchers if the Source is an object, e.g. <code>[&#39;/\\w+Date/&#39;]</code>,
+										or an array of range matchers if the Source is an array, e.g. <code>[&#39;8-12&#39;]</code>.</p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="jsonizer.reviver.html#get">Reviver.get</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://badcafe.github.io/jsonizer/#/README?id=classes">User guide</a></p>
 									</dd>
 								</dl>
 							</div>
@@ -356,17 +407,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L1360">jsonizer.ts:1360</a></li>
+									<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L1477">jsonizer.ts:1477</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>A replacement function of <code>JSON.stringify()</code>.</p>
 								</div>
-								<p>If you see such a warning in the console :</p>
-								<pre><code><span style="color: #A31515">&quot;Unable to patch JSON.stringify(), use stringify() instead&quot;</span>
+								<blockquote>
+									<p>For internal use only, except if you see such a warning in the console :</p>
+									<pre><code><span style="color: #A31515">&quot;Unable to patch JSON.stringify(), use stringify() instead&quot;</span>
 </code></pre>
-								<p>then use this function instead of <code>JSON.stringify()</code>.</p>
+									<p>then use this function instead of <code>JSON.stringify()</code>.</p>
+								</blockquote>
+								<a href="#note" id="note" style="color: inherit; text-decoration: none;">
+									<h2>Note</h2>
+								</a>
+								<p>This function is just a wrapper around <code>JSON.stringify()</code>
+								used to handle properly the root element.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">

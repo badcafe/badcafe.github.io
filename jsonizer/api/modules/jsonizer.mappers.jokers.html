@@ -97,7 +97,7 @@
 <span style="color: #008000">//                           by -say- &#039;**&#039;, &#039;that&#039;, and &#039;~&#039; :</span>
 <span style="color: #001080">ClassMapper</span><span style="color: #000000">&lt;</span><span style="color: #001080">Foo</span><span style="color: #000000">, </span><span style="color: #001080">FooSource</span><span style="color: #000000">, [</span><span style="color: #A31515">&#039;~</span><span style="color: #EE0000">\\</span><span style="color: #A31515">w+~&#039;</span><span style="color: #000000">], </span><span style="color: #A31515">&#039;**&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;that&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;~&#039;</span><span style="color: #000000">&gt; = {</span>
 <span style="color: #000000">    </span><span style="color: #008000">// as soon as they are renamed, the next entry is mandatory :</span>
-<span style="color: #000000">    </span><span style="color: #001080">[Jokers.Key]:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;**&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;that&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;~&#039;</span><span style="color: #000000">],</span>
+<span style="color: #000000">    </span><span style="color: #001080">[Mappers.Jokers.$]:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;**&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;that&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;~&#039;</span><span style="color: #000000">],</span>
 <span style="color: #000000">    </span><span style="color: #A31515">&#039;**&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
 <span style="color: #000000">         </span><span style="color: #008000">// &#039;**&#039; is the optional mapper for *Any* other fields</span>
 <span style="color: #000000">    }</span>
@@ -135,7 +135,7 @@
 					<div class="tsd-signature tsd-kind-icon">Custom&lt;Any, Self, Delim&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;.&quot;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;*&quot;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;/&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;-&quot;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{ </span>[$]<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-symbol">{ </span>[$]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-symbol">{ </span>[$]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-symbol">{ </span>[$]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Self</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L186">jsonizer.ts:186</a></li>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L201">jsonizer.ts:201</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -144,6 +144,11 @@
 						</div>
 						<p>When <code>Any</code> is not <code>&#39;*&#39;</code> or <code>Self</code> is not <code>&#39;.&#39;</code> or <code>Delim</code> is not <code>&#39;/&#39;</code> or <code>&#39;-&#39;</code>,
 						then this type contains an entry that must contain an array with the new values.</p>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="jsonizer.mappers.jokers.html">Jokers</a></p>
+							</dd>
+						</dl>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
 					<ul class="tsd-type-parameters">
@@ -167,7 +172,7 @@
 					<div class="tsd-signature tsd-kind-icon">$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="jsonizer.mappers.jokers.html#_" class="tsd-signature-type" data-tsd-kind="Variable">$</a><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L178">jsonizer.ts:178</a></li>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/jsonizer.ts#L190">jsonizer.ts:190</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -182,6 +187,11 @@
 							<li>&quot;Delim&quot; (<code>&#39;/&#39;</code>) when used as the Regexp delimiter, e.g. <code>&#39;/\\w+Date/&#39;</code></li>
 							<li>&quot;Delim&quot; (<code>&#39;-&#39;</code>) when used as the range delimiter, e.g. <code>&#39;8-12&#39;</code></li>
 						</ul>
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="jsonizer.mappers.jokers.html">Jokers</a></p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 			</section>
