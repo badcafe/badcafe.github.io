@@ -12,10 +12,10 @@
 
 | Files | 5 | |
 | ----- | -: | - |
-| Lines of code | 969 | (w/o comments) |
-| Comments | 930 | (+ 121 with code) |
-| Empty lines | 108 | |
-| **Total lines** | **2007** | (w/o tests) |
+| Lines of code | 970 | (w/o comments) |
+| Comments | 931 | (+ 121 with code) |
+| Empty lines | 109 | |
+| **Total lines** | **2010** | (w/o tests) |
 | TODO | 1 | lines |
 | Tests | 2121 | (w/o comments) |
 
@@ -27,9 +27,9 @@ var myChart = new Chart(ctx, {
         labels: ['Code', 'Comments', 'Empty', 'Tests'],
         datasets: [{
             label: 'Metrics',
-            data: [969, 
-                930, 
-                108,
+            data: [970, 
+                931, 
+                109,
                 2121
             ],
             backgroundColor: [
@@ -73,20 +73,54 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/case.rebolon.test.ts` **8.389s** 🐢 <!-- {docsify-ignore} -->
+### ✅ `/test/reviver.test.ts` **1.113s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 Use case (taken from another tool)
+#### 🔹 Operations with Revivers
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
+| ✅ | Revive object | stringify reviver |
+| ✅ | Revive object | reviver from JSON |
+| ✅ | Revive object | reviver from replacer |
+| ✅ | Revive class | stringify reviver |
+| ✅ | Revive class | reviver from JSON |
+| ✅ | Revive class | reviver from replacer |
+| ✅ | Revive class with namespace | stringify reviver |
+| ✅ | Revive class with namespace | reviver from JSON |
+| ✅ | Revive class with namespace | reviver from replacer |
+| ✅ | Nested reviver | stringify reviver |
+
+
+#### 🔹 Revivers generation
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Arrays | single item |
+| ✅ | Arrays | 2 items |
+| ✅ | Arrays | 3 items |
+| ✅ | Arrays | n items |
+| ✅ | Deep struct in arrays | single item |
+| ✅ | Deep struct in arrays | 2 items |
+| ✅ | Deep struct in arrays | 3 items |
+| ✅ | Deep struct in arrays | n items |
+| ✅ | Tuple | single mapping |
+| ✅ | Range | [1-2] |
+| ✅ | Range | [1-3] |
+| ✅ | Range | [1-10] |
+| ✅ | Tuple | Mix |
+| ✅ | Ranges | with RegExp inside |
+| ✅ | Submapper | can merge |
+| ✅ | Submapper | with primitive inside |
+| ✅ | Submapper | with primitive before |
+| ✅ | Submapper | with primitive after |
+| ✅ | Merge reviver | Missing mapping after |
+| ✅ | Merge reviver | Missing mapping before |
+| ✅ | Merge reviver | Disjoints mappings |
 
 
 
-### ✅ `/test/readme.test.ts` **8.519s** 🐢 <!-- {docsify-ignore} -->
+### ✅ `/test/readme.test.ts` **1.189s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 README.md examples
@@ -130,7 +164,56 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/basic.test.ts` **9.056s** 🐢 <!-- {docsify-ignore} -->
+### ✅ `/test/case.rebolon.test.ts` **0.169s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Use case (taken from another tool)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
+
+
+
+### ✅ `/test/errors.test.ts` **0.152s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Errors
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | reviving | Error |
+| ✅ | reviving | TypeError |
+| ✅ | reviving | MyError |
+
+
+
+### ✅ `/test/case.emmkimme.test.ts` **0.175s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Use case (taken from another tool)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
+| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
+
+
+
+### ✅ `/test/types.test.ts` **0.166s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Advanced Jsonizer types
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Code | Must compile |
+
+
+
+### ✅ `/test/basic.test.ts` **1.543s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -216,89 +299,6 @@ var myChart = new Chart(ctx, {
 | ✅ | Nested structure | Parse |
 | ✅ | Nested structure | Revive after parse |
 | ✅ | Invariants | API |
-
-
-
-### ✅ `/test/case.emmkimme.test.ts` **0.708s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
-| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
-
-
-
-### ✅ `/test/reviver.test.ts` **1.079s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Operations with Revivers
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Revive object | stringify reviver |
-| ✅ | Revive object | reviver from JSON |
-| ✅ | Revive object | reviver from replacer |
-| ✅ | Revive class | stringify reviver |
-| ✅ | Revive class | reviver from JSON |
-| ✅ | Revive class | reviver from replacer |
-| ✅ | Revive class with namespace | stringify reviver |
-| ✅ | Revive class with namespace | reviver from JSON |
-| ✅ | Revive class with namespace | reviver from replacer |
-| ✅ | Nested reviver | stringify reviver |
-
-
-#### 🔹 Revivers generation
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Arrays | single item |
-| ✅ | Arrays | 2 items |
-| ✅ | Arrays | 3 items |
-| ✅ | Arrays | n items |
-| ✅ | Deep struct in arrays | single item |
-| ✅ | Deep struct in arrays | 2 items |
-| ✅ | Deep struct in arrays | 3 items |
-| ✅ | Deep struct in arrays | n items |
-| ✅ | Tuple | single mapping |
-| ✅ | Range | [1-2] |
-| ✅ | Range | [1-3] |
-| ✅ | Range | [1-10] |
-| ✅ | Tuple | Mix |
-| ✅ | Ranges | with RegExp inside |
-| ✅ | Submapper | can merge |
-| ✅ | Submapper | with primitive inside |
-| ✅ | Submapper | with primitive before |
-| ✅ | Submapper | with primitive after |
-| ✅ | Merge reviver | Missing mapping after |
-| ✅ | Merge reviver | Missing mapping before |
-| ✅ | Merge reviver | Disjoints mappings |
-
-
-
-### ✅ `/test/errors.test.ts` **0.475s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Errors
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | reviving | Error |
-| ✅ | reviving | TypeError |
-| ✅ | reviving | MyError |
-
-
-
-### ✅ `/test/types.test.ts` **0.409s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Advanced Jsonizer types
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Code | Must compile |
 
 
 
