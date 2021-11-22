@@ -73,7 +73,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/reviver.test.ts` **1.113s**  <!-- {docsify-ignore} -->
+### ✅ `/test/reviver.test.ts` **1.105s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Operations with Revivers
@@ -120,51 +120,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/readme.test.ts` **1.189s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 README.md examples
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Overview | Invariants |
-| ✅ | Overview | w/o Jsonizer |
-| ✅ | Overview | with Jsonizer |
-| ✅ | Revivers mappings | Objects |
-| ✅ | Revivers mappings | Arrays |
-| ✅ | Revivers mappings | Nested mapping |
-| ✅ | Revivers mappings | Tuples |
-| ✅ | Classes | Custom classes |
-| ✅ | Classes | Self apply |
-| ✅ | Classes | Self assign |
-| ✅ | Classes | No @ decorator |
-| ✅ | Classes | Class with nested JSON |
-| ✅ | Classes | Class with nested class |
-| ✅ | Classes | Pass through (Identity) |
-| ✅ | Classes | The `.` (self) builder |
-| ✅ | DTO | `toJSON()` and DTO |
-| ✅ | DTO | Types ambivalence |
-| ✅ | DTO | Mappers for Sub-DTO |
-| ✅ | DTO | Mappers for Sub-DTO (alt) |
-| ✅ | DTO | Reviving third-party classes and built-in classes |
-| ✅ | DTO | `[Jsonizer.toJSON]` |
-| ✅ | DTO | Fixing a bad structure |
-| ✅ | Ranges and Regexp | Regexp |
-| ✅ | Ranges and Regexp | Regexp (alt) |
-| ✅ | Ranges and Regexp | Range |
-| ✅ | Namespaces | Jsonizer namespaces |
-| ✅ | Namespaces | Jsonizer namespaces (Summary) |
-| ✅ | Reviving parsed data | Revive after parsing |
-| ✅ | Reviver generation 🔹 Replacer | from class |
-| ✅ | Reviver generation 🔹 Replacer | from array |
-| ✅ | Reviver generation 🔹 Replacer | from nested structure |
-| ✅ | Reviver generation 🔹 Subreviver | Array |
-| ✅ | Reviver generation 🔹 Subreviver | Item |
-| ✅ | Reviver generation | Dynamic reviver |
-
-
-
-### ✅ `/test/case.rebolon.test.ts` **0.169s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.rebolon.test.ts` **0.162s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Use case (taken from another tool)
@@ -177,43 +133,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/errors.test.ts` **0.152s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Errors
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | reviving | Error |
-| ✅ | reviving | TypeError |
-| ✅ | reviving | MyError |
-
-
-
-### ✅ `/test/case.emmkimme.test.ts` **0.175s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
-| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
-
-
-
-### ✅ `/test/types.test.ts` **0.166s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Advanced Jsonizer types
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Code | Must compile |
-
-
-
-### ✅ `/test/basic.test.ts` **1.543s**  <!-- {docsify-ignore} -->
+### ✅ `/test/basic.test.ts` **1.31s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -299,6 +219,86 @@ var myChart = new Chart(ctx, {
 | ✅ | Nested structure | Parse |
 | ✅ | Nested structure | Revive after parse |
 | ✅ | Invariants | API |
+
+
+
+### ✅ `/test/types.test.ts` **0.136s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Advanced Jsonizer types
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Code | Must compile |
+
+
+
+### ✅ `/test/errors.test.ts` **0.155s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Errors
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | reviving | Error |
+| ✅ | reviving | TypeError |
+| ✅ | reviving | MyError |
+
+
+
+### ✅ `/test/readme.test.ts` **1.507s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 README.md examples
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Overview | Invariants |
+| ✅ | Overview | w/o Jsonizer |
+| ✅ | Overview | with Jsonizer |
+| ✅ | Revivers mappings | Objects |
+| ✅ | Revivers mappings | Arrays |
+| ✅ | Revivers mappings | Nested mapping |
+| ✅ | Revivers mappings | Tuples |
+| ✅ | Classes | Custom classes |
+| ✅ | Classes | Self apply |
+| ✅ | Classes | Self assign |
+| ✅ | Classes | No @ decorator |
+| ✅ | Classes | Class with nested JSON |
+| ✅ | Classes | Class with nested class |
+| ✅ | Classes | Pass through (Identity) |
+| ✅ | Classes | The `.` (self) builder |
+| ✅ | DTO | `toJSON()` and DTO |
+| ✅ | DTO | Types ambivalence |
+| ✅ | DTO | Mappers for Sub-DTO |
+| ✅ | DTO | Mappers for Sub-DTO (alt) |
+| ✅ | DTO | Reviving third-party classes and built-in classes |
+| ✅ | DTO | `[Jsonizer.toJSON]` |
+| ✅ | DTO | Fixing a bad structure |
+| ✅ | Ranges and Regexp | Regexp |
+| ✅ | Ranges and Regexp | Regexp (alt) |
+| ✅ | Ranges and Regexp | Range |
+| ✅ | Namespaces | Jsonizer namespaces |
+| ✅ | Namespaces | Jsonizer namespaces (Summary) |
+| ✅ | Reviving parsed data | Revive after parsing |
+| ✅ | Reviver generation 🔹 Replacer | from class |
+| ✅ | Reviver generation 🔹 Replacer | from array |
+| ✅ | Reviver generation 🔹 Replacer | from nested structure |
+| ✅ | Reviver generation 🔹 Subreviver | Array |
+| ✅ | Reviver generation 🔹 Subreviver | Item |
+| ✅ | Reviver generation | Dynamic reviver |
+
+
+
+### ✅ `/test/case.emmkimme.test.ts` **0.114s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Use case (taken from another tool)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
+| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
 
 
 
