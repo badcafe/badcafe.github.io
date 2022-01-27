@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Mappers | Jsonizer - v2.1.0</title>
+	<title>Class | Jsonizer - v2.1.0</title>
 	<meta name="description" content="Documentation for Jsonizer - v2.1.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,41 +55,28 @@
 					<a href="../modules.html">Jsonizer - v2.1.0</a>
 				</li>
 				<li>
-					<a href="jsonizer.html">jsonizer</a>
+					<a href="base.html">base</a>
 				</li>
 				<li>
-					<a href="jsonizer.mappers.html">Mappers</a>
+					<a href="base.class.html">Class</a>
 				</li>
 			</ul>
-			<h1>Namespace Mappers</h1>
+			<h1>Namespace Class</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Property related types for mappers.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Namespaces</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-namespace tsd-parent-kind-namespace"><a href="jsonizer.mappers.jokers.html" class="tsd-kind-icon">Jokers</a></li>
-								<li class="tsd-kind-namespace tsd-parent-kind-namespace"><a href="jsonizer.mappers.matcher.html" class="tsd-kind-icon">Matcher</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="jsonizer.mappers.html#matcher-1" class="tsd-kind-icon">Matcher</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="base.class.html#abstract" class="tsd-kind-icon">Abstract</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="base.class.html#concrete" class="tsd-kind-icon">Concrete</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,29 +85,65 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
-					<a name="matcher-1" class="tsd-anchor"></a>
-					<h3>Matcher</h3>
-					<div class="tsd-signature tsd-kind-icon">Matcher&lt;Source, Delim&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Source</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> ? </span><a href="jsonizer.mappers.matcher.html#range" class="tsd-signature-type" data-tsd-kind="Type alias">Range</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><a href="jsonizer.mappers.matcher.html#regexp" class="tsd-signature-type" data-tsd-kind="Type alias">Regexp</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Delim</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="abstract" class="tsd-anchor"></a>
+					<h3>Abstract</h3>
+					<div class="tsd-signature tsd-kind-icon">Abstract&lt;Type&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>prototype<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/src/jsonizer.ts#L218">src/jsonizer.ts:218</a></li>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/src/base.ts#L30">src/base.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A matcher is either a regular expression for matching properties
-							of an object, or a range for matching indexes of an array.</p>
+							<p>Any abstract class.</p>
 						</div>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
 					<ul class="tsd-type-parameters">
 						<li>
-							<h4>Source</h4>
-						</li>
-						<li>
-							<h4>Delim<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
+							<h4>Type = <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>prototype<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="concrete" class="tsd-anchor"></a>
+					<h3>Concrete</h3>
+					<div class="tsd-signature tsd-kind-icon">Concrete&lt;Type, Args&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/badcafe/jsonizer/blob/master/src/src/base.ts#L23">src/base.ts:23</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Any concrete class, that is to say not abstract.</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>Type = <span class="tsd-signature-type">any</span></h4>
+						</li>
+						<li>
+							<h4>Args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span> = <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -135,7 +158,10 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
-						<a href="jsonizer.mappers.html#matcher-1" class="tsd-kind-icon">Matcher</a>
+						<a href="base.class.html#abstract" class="tsd-kind-icon">Abstract</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="base.class.html#concrete" class="tsd-kind-icon">Concrete</a>
 					</li>
 				</ul>
 			</nav>

@@ -1,5 +1,11 @@
 # Jsonizer Changelog
 
+### 2.1.0
+
+* Include abstract class in type definition
+* Generate dynamic class for custom `Error`s
+* Handle `null` in built-in revivers
+
 ### 2.0.1
 
 * Bug fix: empty keys elsewhere than on the root when running `JSON.stringify()` were causing a failure

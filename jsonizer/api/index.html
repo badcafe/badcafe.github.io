@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Jsonizer - v2.0.0</title>
-	<meta name="description" content="Documentation for Jsonizer - v2.0.0">
+	<title>Jsonizer - v2.1.0</title>
+	<meta name="description" content="Documentation for Jsonizer - v2.1.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">Jsonizer - v2.0.0</a>
+					<a href="index.html" class="title">Jsonizer - v2.1.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>Jsonizer - v2.0.0</h1>
+			<h1>Jsonizer - v2.1.0</h1>
 		</div>
 	</div>
 </header>
@@ -91,6 +91,7 @@
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">personJson</span><span style="color: #000000"> = </span><span style="color: #267F99">JSON</span><span style="color: #000000">.</span><span style="color: #795E26">stringify</span><span style="color: #000000">(</span><span style="color: #001080">person</span><span style="color: #000000">);</span>
 <span style="color: #008000">// store or send the data</span>
 </code></pre>
+				<p>Dates in <code>personJson</code> will appear as text, and if you parse back that JSON string to a plain object, every date field will be <code>string</code> instead of <code>Date</code> !</p>
 				<p>Now, let&#39;s use <strong>Jsonizer</strong> 😍</p>
 				<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">personReviver</span><span style="color: #000000"> = </span><span style="color: #001080">Jsonizer</span><span style="color: #000000">.</span><span style="color: #795E26">reviver</span><span style="color: #000000">&lt;</span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">person</span><span style="color: #000000">&gt;({</span>
 <span style="color: #000000">    </span><span style="color: #001080">birthDate:</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">,</span>
@@ -112,6 +113,12 @@
 				<ul>
 					<li class=" ">
 						<a href="modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/base.html">base</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/errors.html">errors</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/jsonizer.html">jsonizer</a>
@@ -137,6 +144,7 @@
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
 				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
