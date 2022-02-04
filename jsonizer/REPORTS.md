@@ -13,11 +13,11 @@
 | Files | 7 | |
 | ----- | -: | - |
 | Lines of code | 1064 | (w/o comments) |
-| Comments | 997 | (+ 126 with code) |
+| Comments | 998 | (+ 125 with code) |
 | Empty lines | 131 | |
-| **Total lines** | **2192** | (w/o tests) |
+| **Total lines** | **2193** | (w/o tests) |
 | TODO | 1 | lines |
-| Tests | 2368 | (w/o comments) |
+| Tests | 2365 | (w/o comments) |
 
 <script>
 var ctx = document.getElementById('metricsChart');
@@ -28,9 +28,9 @@ var myChart = new Chart(ctx, {
         datasets: [{
             label: 'Metrics',
             data: [1064, 
-                997, 
+                998, 
                 131,
-                2368
+                2365
             ],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -73,54 +73,19 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/reviver.test.ts` **1.582s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.emmkimme.test.ts` **1.321s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 Operations with Revivers
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Revive object | stringify reviver |
-| ✅ | Revive object | reviver from JSON |
-| ✅ | Revive object | reviver from replacer |
-| ✅ | Revive class | stringify reviver |
-| ✅ | Revive class | reviver from JSON |
-| ✅ | Revive class | reviver from replacer |
-| ✅ | Revive class with namespace | stringify reviver |
-| ✅ | Revive class with namespace | reviver from JSON |
-| ✅ | Revive class with namespace | reviver from replacer |
-| ✅ | Nested reviver | stringify reviver |
-
-
-#### 🔹 Revivers generation
+#### 🔹 Use case (taken from another tool)
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | Arrays | single item |
-| ✅ | Arrays | 2 items |
-| ✅ | Arrays | 3 items |
-| ✅ | Arrays | n items |
-| ✅ | Deep struct in arrays | single item |
-| ✅ | Deep struct in arrays | 2 items |
-| ✅ | Deep struct in arrays | 3 items |
-| ✅ | Deep struct in arrays | n items |
-| ✅ | Tuple | single mapping |
-| ✅ | Range | [1-2] |
-| ✅ | Range | [1-3] |
-| ✅ | Range | [1-10] |
-| ✅ | Tuple | Mix |
-| ✅ | Ranges | with RegExp inside |
-| ✅ | Submapper | can merge |
-| ✅ | Submapper | with primitive inside |
-| ✅ | Submapper | with primitive before |
-| ✅ | Submapper | with primitive after |
-| ✅ | Merge reviver | Missing mapping after |
-| ✅ | Merge reviver | Missing mapping before |
-| ✅ | Merge reviver | Disjoints mappings |
+| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
+| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
 
 
 
-### ✅ `/test/basic.test.ts` **1.603s**  <!-- {docsify-ignore} -->
+### ✅ `/test/basic.test.ts` **1.478s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -209,7 +174,70 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/readme.test.ts` **1.594s**  <!-- {docsify-ignore} -->
+### ✅ `/test/reviver.test.ts` **1.849s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Operations with Revivers
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Revive object | stringify reviver |
+| ✅ | Revive object | reviver from JSON |
+| ✅ | Revive object | reviver from replacer |
+| ✅ | Revive class | stringify reviver |
+| ✅ | Revive class | reviver from JSON |
+| ✅ | Revive class | reviver from replacer |
+| ✅ | Revive class with namespace | stringify reviver |
+| ✅ | Revive class with namespace | reviver from JSON |
+| ✅ | Revive class with namespace | reviver from replacer |
+| ✅ | Nested reviver | stringify reviver |
+
+
+#### 🔹 Revivers generation
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Arrays | single item |
+| ✅ | Arrays | 2 items |
+| ✅ | Arrays | 3 items |
+| ✅ | Arrays | n items |
+| ✅ | Deep struct in arrays | single item |
+| ✅ | Deep struct in arrays | 2 items |
+| ✅ | Deep struct in arrays | 3 items |
+| ✅ | Deep struct in arrays | n items |
+| ✅ | Tuple | single mapping |
+| ✅ | Range | [1-2] |
+| ✅ | Range | [1-3] |
+| ✅ | Range | [1-10] |
+| ✅ | Tuple | Mix |
+| ✅ | Ranges | with RegExp inside |
+| ✅ | Submapper | can merge |
+| ✅ | Submapper | with primitive inside |
+| ✅ | Submapper | with primitive before |
+| ✅ | Submapper | with primitive after |
+| ✅ | Merge reviver | Missing mapping after |
+| ✅ | Merge reviver | Missing mapping before |
+| ✅ | Merge reviver | Disjoints mappings |
+
+
+
+### ✅ `/test/errors.test.ts` **0.35s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Errors
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | reviving | Error |
+| ✅ | reviving | TypeError |
+| ✅ | reviving | MyError |
+| ✅ | reviving | MyWarning |
+| ✅ | reviving | 503 Service Unavailable |
+| ✅ | reviving | null |
+
+
+
+### ✅ `/test/readme.test.ts` **0.598s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 README.md examples
@@ -254,37 +282,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/emptyKey.test.ts` **0.204s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Empty object key
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Stringify with empty key | as the first item |
-| ✅ | Stringify with empty key | as the last item |
-| ✅ | Parse with empty key | as the first item |
-| ✅ | Parse with empty key | as the last item |
-
-
-
-### ✅ `/test/errors.test.ts` **0.375s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Errors
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | reviving | Error |
-| ✅ | reviving | TypeError |
-| ✅ | reviving | MyError |
-| ✅ | reviving | MyWarning |
-| ✅ | reviving | 503 Service Unavailable |
-| ✅ | reviving | null |
-
-
-
-### ✅ `/test/case.rebolon.test.ts` **0.436s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.rebolon.test.ts` **0.291s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Use case (taken from another tool)
@@ -297,19 +295,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/case.emmkimme.test.ts` **0.305s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
-| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
-
-
-
-### ✅ `/test/types.test.ts` **0.285s**  <!-- {docsify-ignore} -->
+### ✅ `/test/types.test.ts` **0.234s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Advanced Jsonizer types
@@ -317,6 +303,20 @@ var myChart = new Chart(ctx, {
 | Status | Suite | Test |
 | ------ | ----- | ---- |
 | ✅ | Code | Must compile |
+
+
+
+### ✅ `/test/emptyKey.test.ts` **0.196s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Empty object key
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Stringify with empty key | as the first item |
+| ✅ | Stringify with empty key | as the last item |
+| ✅ | Parse with empty key | as the first item |
+| ✅ | Parse with empty key | as the last item |
 
 
 

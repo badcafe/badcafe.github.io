@@ -1,161 +1,32 @@
-<!doctype html>
-<html class="default no-js">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Jsonizer - v2.1.0</title>
-	<meta name="description" content="Documentation for Jsonizer - v2.1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
-	<script async src="assets/js/search.js" id="search-script"></script>
-</head>
-<body>
-<header>
-	<div class="tsd-page-toolbar">
-		<div class="container">
-			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
-					<div class="field">
-						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
-						<input id="tsd-search-field" type="text" />
-					</div>
-					<ul class="results">
-						<li class="state loading">Preparing search index...</li>
-						<li class="state failure">The search index is not available</li>
-					</ul>
-					<a href="index.html" class="title">Jsonizer - v2.1.0</a>
-				</div>
-				<div class="table-cell" id="tsd-widgets">
-					<div id="tsd-filter">
-						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
-						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-						</div>
-					</div>
-					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="tsd-page-title">
-		<div class="container">
-			<h1>Jsonizer - v2.1.0</h1>
-		</div>
-	</div>
-</header>
-<div class="container container-main">
-	<div class="row">
-		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<a href="#jsonizer" id="jsonizer" style="color: inherit; text-decoration: none;">
-					<h1>Jsonizer</h1>
-				</a>
-				<div style='margin: 20px; padding: 20px; border: solid 3px'>
-					<a href="http://badcafe.github.io/jsonizer">Full documentation and API available HERE</a>
-				</div>
-				<blockquote>
-					<p><strong>Easy nested instance reviving for JSON</strong></p>
-				</blockquote>
-				<p><code>@badcafe/jsonizer</code> is a <a href="https://www.typescriptlang.org/">Typescript</a> library that takes care of instances of classes in the hierarchy of your data structure when you use <code>JSON.stringify()</code> and <code>JSON.parse()</code>.</p>
-				<p style='align: center'>
-					<img src="docs/matryoshka.svg"/>
-				</p>
-				<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
-					<h3>Overview</h3>
-				</a>
-				<p><a href="http://badcafe.github.io/jsonizer">Full documentation and API available HERE</a></p>
-				<p>Let&#39;s consider some data :</p>
-				<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">person</span><span style="color: #000000"> = {</span>
-<span style="color: #000000">    </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Bob&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">birthDate:</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;1998-10-21&#039;</span><span style="color: #000000">),</span>
-<span style="color: #000000">    </span><span style="color: #001080">hobbies:</span><span style="color: #000000"> [</span>
-<span style="color: #000000">        {   </span><span style="color: #001080">hobby:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;programming&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #001080">startDate:</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;2021-01-01&#039;</span><span style="color: #000000">),</span>
-<span style="color: #000000">        },</span>
-<span style="color: #000000">        {   </span><span style="color: #001080">hobby:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;cooking&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #001080">startDate:</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;2020-12-31&#039;</span><span style="color: #000000">),</span>
-<span style="color: #000000">        },</span>
-<span style="color: #000000">    ]</span>
-<span style="color: #000000">}</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">personJson</span><span style="color: #000000"> = </span><span style="color: #267F99">JSON</span><span style="color: #000000">.</span><span style="color: #795E26">stringify</span><span style="color: #000000">(</span><span style="color: #001080">person</span><span style="color: #000000">);</span>
-<span style="color: #008000">// store or send the data</span>
-</code></pre>
-				<p>Dates in <code>personJson</code> will appear as text, and if you parse back that JSON string to a plain object, every date field will be <code>string</code> instead of <code>Date</code> !</p>
-				<p>Now, let&#39;s use <strong>Jsonizer</strong> 😍</p>
-				<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">personReviver</span><span style="color: #000000"> = </span><span style="color: #001080">Jsonizer</span><span style="color: #000000">.</span><span style="color: #795E26">reviver</span><span style="color: #000000">&lt;</span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">person</span><span style="color: #000000">&gt;({</span>
-<span style="color: #000000">    </span><span style="color: #001080">birthDate:</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">hobbies:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #A31515">&#039;*&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">            </span><span style="color: #001080">startDate:</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span>
-<span style="color: #000000">        }</span>
-<span style="color: #000000">    }</span>
-<span style="color: #000000">});</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">personFromJson</span><span style="color: #000000"> = </span><span style="color: #267F99">JSON</span><span style="color: #000000">.</span><span style="color: #795E26">parse</span><span style="color: #000000">(</span><span style="color: #001080">personJson</span><span style="color: #000000">, </span><span style="color: #001080">personReviver</span><span style="color: #000000">);</span>
-</code></pre>
-				<p>Every dates string in the JSON text have been mapped to <code>Date</code> objects in the parsed result.</p>
-				<p><strong>Jsonizer</strong> can indifferently revive JSON data structures (arrays, objects) or class instances with recursively nested custom classes, third-party classes, built-in classes, or sub JSON structures (arrays, objects).</p>
-				<p><a href="http://badcafe.github.io/jsonizer">Full documentation and API available HERE</a></p>
-			</div>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-			<nav class="tsd-navigation primary">
-				<ul>
-					<li class=" ">
-						<a href="modules.html">Exports</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/base.html">base</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/errors.html">errors</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/jsonizer.html">jsonizer</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/namespace.html">namespace</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/util.html">util</a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="tsd-navigation secondary menu-sticky">
-				<ul class="before-current">
-				</ul>
-			</nav>
-		</div>
-	</div>
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Jsonizer - v3.0.0</title><meta name="description" content="Documentation for Jsonizer - v3.0.0"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Jsonizer - v3.0.0</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>Jsonizer - v3.0.0</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#jsonizer" id="jsonizer" style="color: inherit; text-decoration: none;">
+  <h1>Jsonizer</h1>
+</a>
+<div style='margin: 20px; padding: 20px; border: solid 3px'>
+    <a href="http://badcafe.github.io/jsonizer">Full documentation and API available HERE</a>
 </div>
-<footer>
-	<div class="container">
-		<h2>Legend</h2>
-		<div class="tsd-legend-group">
-			<ul class="tsd-legend">
-				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-			</ul>
-		</div>
-	</div>
-</footer>
-<div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+
+<blockquote>
+<p><strong>Easy nested instance reviving for JSON</strong></p>
+</blockquote>
+<p><code>@badcafe/jsonizer</code> is a <a href="https://www.typescriptlang.org/">Typescript</a> library that takes care of instances of classes in the hierarchy of your data structure when you use <code>JSON.stringify()</code> and <code>JSON.parse()</code>.</p>
+<p style='align: center'>
+    <img src="docs/matryoshka.svg"/>
+</p>
+
+
+<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
+  <h3>Overview</h3>
+</a>
+<p><a href="http://badcafe.github.io/jsonizer">Full documentation and API available HERE</a></p>
+<p>Let&#39;s consider some data :</p>
+<pre><code class="language-typescript"><span class="hl-1">const</span><span class="hl-2"> </span><span class="hl-5">person</span><span class="hl-2"> = {</span><br/><span class="hl-2">    </span><span class="hl-4">name:</span><span class="hl-2"> </span><span class="hl-6">&#39;Bob&#39;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-4">birthDate:</span><span class="hl-2"> </span><span class="hl-1">new</span><span class="hl-2"> </span><span class="hl-3">Date</span><span class="hl-2">(</span><span class="hl-6">&#39;1998-10-21&#39;</span><span class="hl-2">),</span><br/><span class="hl-2">    </span><span class="hl-4">hobbies:</span><span class="hl-2"> [</span><br/><span class="hl-2">        {   </span><span class="hl-4">hobby:</span><span class="hl-2"> </span><span class="hl-6">&#39;programming&#39;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-4">startDate:</span><span class="hl-2"> </span><span class="hl-1">new</span><span class="hl-2"> </span><span class="hl-3">Date</span><span class="hl-2">(</span><span class="hl-6">&#39;2021-01-01&#39;</span><span class="hl-2">),</span><br/><span class="hl-2">        },</span><br/><span class="hl-2">        {   </span><span class="hl-4">hobby:</span><span class="hl-2"> </span><span class="hl-6">&#39;cooking&#39;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-4">startDate:</span><span class="hl-2"> </span><span class="hl-1">new</span><span class="hl-2"> </span><span class="hl-3">Date</span><span class="hl-2">(</span><span class="hl-6">&#39;2020-12-31&#39;</span><span class="hl-2">),</span><br/><span class="hl-2">        },</span><br/><span class="hl-2">    ]</span><br/><span class="hl-2">}</span><br/><span class="hl-1">const</span><span class="hl-2"> </span><span class="hl-5">personJson</span><span class="hl-2"> = </span><span class="hl-3">JSON</span><span class="hl-2">.</span><span class="hl-7">stringify</span><span class="hl-2">(</span><span class="hl-4">person</span><span class="hl-2">);</span><br/><span class="hl-0">// store or send the data</span>
+</code></pre>
+<p>Dates in <code>personJson</code> will appear as text, and if you parse back that JSON string to a plain object, every date field will be <code>string</code> instead of <code>Date</code> !</p>
+<p>Now, let&#39;s use <strong>Jsonizer</strong> 😍</p>
+<pre><code class="language-typescript"><span class="hl-1">const</span><span class="hl-2"> </span><span class="hl-5">personReviver</span><span class="hl-2"> = </span><span class="hl-4">Jsonizer</span><span class="hl-2">.</span><span class="hl-7">reviver</span><span class="hl-2">&lt;</span><span class="hl-1">typeof</span><span class="hl-2"> </span><span class="hl-4">person</span><span class="hl-2">&gt;({</span><br/><span class="hl-2">    </span><span class="hl-4">birthDate:</span><span class="hl-2"> </span><span class="hl-3">Date</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-4">hobbies:</span><span class="hl-2"> {</span><br/><span class="hl-2">        </span><span class="hl-6">&#39;*&#39;</span><span class="hl-4">:</span><span class="hl-2"> {</span><br/><span class="hl-2">            </span><span class="hl-4">startDate:</span><span class="hl-2"> </span><span class="hl-3">Date</span><br/><span class="hl-2">        }</span><br/><span class="hl-2">    }</span><br/><span class="hl-2">});</span><br/><span class="hl-1">const</span><span class="hl-2"> </span><span class="hl-5">personFromJson</span><span class="hl-2"> = </span><span class="hl-3">JSON</span><span class="hl-2">.</span><span class="hl-7">parse</span><span class="hl-2">(</span><span class="hl-4">personJson</span><span class="hl-2">, </span><span class="hl-4">personReviver</span><span class="hl-2">);</span>
+</code></pre>
+<p>Every dates string in the JSON text have been mapped to <code>Date</code> objects in the parsed result.</p>
+<p><strong>Jsonizer</strong> can indifferently revive JSON data structures (arrays, objects) or class instances with recursively nested custom classes, third-party classes, built-in classes, or sub JSON structures (arrays, objects).</p>
+<p><a href="http://badcafe.github.io/jsonizer">Full documentation and API available HERE</a></p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li><li class=" tsd-kind-namespace"><a href="modules/Jsonizer.html">Jsonizer</a></li><li class=" tsd-kind-namespace"><a href="modules/Mappers.html">Mappers</a></li><li class=" tsd-kind-namespace"><a href="modules/Namespace.html">Namespace</a></li><li class=" tsd-kind-namespace"><a href="modules/Reviver.html">Reviver</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/Replacer.html" class="tsd-kind-icon">Replacer</a></li><li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="modules.html#Mappers" class="tsd-kind-icon">Mappers</a></li><li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="modules.html#Reviver" class="tsd-kind-icon">Reviver</a></li><li class="tsd-kind-function"><a href="modules.html#Namespace" class="tsd-kind-icon">Namespace</a></li><li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#Reviver" class="tsd-kind-icon">Reviver</a></li><li class="tsd-kind-function"><a href="modules.html#stringify" class="tsd-kind-icon">stringify</a></li></ul></nav></div></div></div><footer class=""><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="overlay"></div><script src="assets/main.js"></script></body></html>
