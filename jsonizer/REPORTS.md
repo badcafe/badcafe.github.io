@@ -12,10 +12,10 @@
 
 | Files | 7 | |
 | ----- | -: | - |
-| Lines of code | 1050 | (w/o comments) |
-| Comments | 1006 | (+ 130 with code) |
-| Empty lines | 136 | |
-| **Total lines** | **2192** | (w/o tests) |
+| Lines of code | 1041 | (w/o comments) |
+| Comments | 995 | (+ 124 with code) |
+| Empty lines | 135 | |
+| **Total lines** | **2171** | (w/o tests) |
 | TODO | 3 | lines |
 | Tests | 2821 | (w/o comments) |
 
@@ -27,9 +27,9 @@ var myChart = new Chart(ctx, {
         labels: ['Code', 'Comments', 'Empty', 'Tests'],
         datasets: [{
             label: 'Metrics',
-            data: [1050, 
-                1006, 
-                136,
+            data: [1041, 
+                995, 
+                135,
                 2821
             ],
             backgroundColor: [
@@ -73,23 +73,87 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/errors.test.ts` **2.2s**  <!-- {docsify-ignore} -->
+### ✅ `/test/graph.test.ts` **1.966s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 Errors
+#### 🔹 Graphs
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | reviving | Error |
-| ✅ | reviving | TypeError |
-| ✅ | reviving | MyError |
-| ✅ | reviving | MyWarning |
-| ✅ | reviving | 503 Service Unavailable |
-| ✅ | reviving | null |
+| ✅ | `JSON.stringify()` | Invariant |
+| ✅ | `JSON.stringify()` | Invariant (realistic) |
+| ✅ | `JSON.stringify()` | Customize `.toJSON()` |
+| ✅ | `JSON.stringify()` | Auto-discard the unwanted field |
+| ✅ | `JSON.parse()` | `ReferenceError` |
+| ✅ | `JSON.parse()` | 👍 |
 
 
 
-### ✅ `/test/basic.test.ts` **2.382s**  <!-- {docsify-ignore} -->
+### ✅ `/test/emptyKey.test.ts` **0.159s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Empty object key
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Stringify with empty key | as the first item |
+| ✅ | Stringify with empty key | as the last item |
+| ✅ | Stringify with empty key | as the single item |
+| ✅ | Stringify with empty key | Invariant |
+| ✅ | Parse with empty key | as the first item |
+| ✅ | Parse with empty key | as the last item |
+
+
+
+### ✅ `/test/readme.test.ts` **2.223s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 README.md examples
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Overview | Invariants |
+| ✅ | Overview | w/o Jsonizer |
+| ✅ | Overview | with Jsonizer |
+| ✅ | Revivers mappings | Objects |
+| ✅ | Revivers mappings | Arrays |
+| ✅ | Revivers mappings | Nested mapping |
+| ✅ | Revivers mappings | Tuples |
+| ✅ | Classes | Custom classes |
+| ✅ | Classes | Self apply |
+| ✅ | Classes | Self assign |
+| ✅ | Classes | No @ decorator |
+| ✅ | Classes | Class with nested JSON |
+| ✅ | Classes | Class with nested class |
+| ✅ | Classes | Pass through (Identity) |
+| ✅ | Classes | Errors |
+| ✅ | Classes | The `.` (self) builder |
+| ✅ | DTO | `toJSON()` and DTO |
+| ✅ | DTO | Types ambivalence |
+| ✅ | DTO | Mappers for Sub-DTO |
+| ✅ | DTO | Mappers for Sub-DTO (alt) |
+| ✅ | DTO | Reviving third-party classes and built-in classes |
+| ✅ | DTO | `[Jsonizer.toJSON]` |
+| ✅ | DTO | Fixing a bad structure |
+| ✅ | Ranges and Regexp | Regexp |
+| ✅ | Ranges and Regexp | Regexp (alt) |
+| ✅ | Ranges and Regexp | Range |
+| ✅ | Namespaces | Jsonizer namespaces |
+| ✅ | Namespaces | Jsonizer namespaces (Summary) |
+| ✅ | Reviving parsed data | Revive after parsing |
+| ✅ | Reviver generation 🔹 Replacer | from class |
+| ✅ | Reviver generation 🔹 Replacer | from array |
+| ✅ | Reviver generation 🔹 Replacer | from nested structure |
+| ✅ | Reviver generation 🔹 Subreviver | Array |
+| ✅ | Reviver generation 🔹 Subreviver | Item |
+| ✅ | Reviver generation | Dynamic reviver |
+| ✅ | Reviver generation 🔹 Plain object with `toJSON()` | revived with Jsonizer.reviver |
+| ✅ | Reviver generation 🔹 Plain object with `toJSON()` | revived with a placeholder class |
+| ✅ | Reviver generation 🔹 Plain object with `toJSON()` | variant |
+
+
+
+### ✅ `/test/basic.test.ts` **2.082s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -180,85 +244,32 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/readme.test.ts` **2.743s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.emmkimme.test.ts` **0.193s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 README.md examples
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Overview | Invariants |
-| ✅ | Overview | w/o Jsonizer |
-| ✅ | Overview | with Jsonizer |
-| ✅ | Revivers mappings | Objects |
-| ✅ | Revivers mappings | Arrays |
-| ✅ | Revivers mappings | Nested mapping |
-| ✅ | Revivers mappings | Tuples |
-| ✅ | Classes | Custom classes |
-| ✅ | Classes | Self apply |
-| ✅ | Classes | Self assign |
-| ✅ | Classes | No @ decorator |
-| ✅ | Classes | Class with nested JSON |
-| ✅ | Classes | Class with nested class |
-| ✅ | Classes | Pass through (Identity) |
-| ✅ | Classes | Errors |
-| ✅ | Classes | The `.` (self) builder |
-| ✅ | DTO | `toJSON()` and DTO |
-| ✅ | DTO | Types ambivalence |
-| ✅ | DTO | Mappers for Sub-DTO |
-| ✅ | DTO | Mappers for Sub-DTO (alt) |
-| ✅ | DTO | Reviving third-party classes and built-in classes |
-| ✅ | DTO | `[Jsonizer.toJSON]` |
-| ✅ | DTO | Fixing a bad structure |
-| ✅ | Ranges and Regexp | Regexp |
-| ✅ | Ranges and Regexp | Regexp (alt) |
-| ✅ | Ranges and Regexp | Range |
-| ✅ | Namespaces | Jsonizer namespaces |
-| ✅ | Namespaces | Jsonizer namespaces (Summary) |
-| ✅ | Reviving parsed data | Revive after parsing |
-| ✅ | Reviver generation 🔹 Replacer | from class |
-| ✅ | Reviver generation 🔹 Replacer | from array |
-| ✅ | Reviver generation 🔹 Replacer | from nested structure |
-| ✅ | Reviver generation 🔹 Subreviver | Array |
-| ✅ | Reviver generation 🔹 Subreviver | Item |
-| ✅ | Reviver generation | Dynamic reviver |
-| ✅ | Reviver generation 🔹 Plain object with `toJSON()` | revived with Jsonizer.reviver |
-| ✅ | Reviver generation 🔹 Plain object with `toJSON()` | revived with a placeholder class |
-| ✅ | Reviver generation 🔹 Plain object with `toJSON()` | variant |
-
-
-
-### ✅ `/test/graph.test.ts` **0.861s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Graphs
+#### 🔹 Use case (taken from another tool)
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | `JSON.stringify()` | Invariant |
-| ✅ | `JSON.stringify()` | Invariant (realistic) |
-| ✅ | `JSON.stringify()` | Customize `.toJSON()` |
-| ✅ | `JSON.stringify()` | Auto-discard the unwanted field |
-| ✅ | `JSON.parse()` | `ReferenceError` |
-| ✅ | `JSON.parse()` | 👍 |
+| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
+| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
 
 
 
-### ✅ `/test/destructure.test.ts` **0.309s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.rebolon.test.ts` **0.302s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 Destructuring
+#### 🔹 Use case (taken from another tool)
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ |  | Invariants |
-| ✅ |  | [Jsonizer.toJSON](): string |
-| ✅ |  | toJSON(): string |
-| ✅ |  | [Jsonizer.toJSON](): object |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
 
 
 
-### ✅ `/test/reviver.test.ts` **0.916s**  <!-- {docsify-ignore} -->
+### ✅ `/test/reviver.test.ts` **0.451s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Operations with Revivers
@@ -305,48 +316,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/case.rebolon.test.ts` **0.512s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
-
-
-
-### ✅ `/test/case.emmkimme.test.ts` **0.406s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
-| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
-
-
-
-### ✅ `/test/emptyKey.test.ts` **0.327s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Empty object key
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Stringify with empty key | as the first item |
-| ✅ | Stringify with empty key | as the last item |
-| ✅ | Stringify with empty key | as the single item |
-| ✅ | Stringify with empty key | Invariant |
-| ✅ | Parse with empty key | as the first item |
-| ✅ | Parse with empty key | as the last item |
-
-
-
-### ✅ `/test/types.test.ts` **0.287s**  <!-- {docsify-ignore} -->
+### ✅ `/test/types.test.ts` **0.216s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Advanced Jsonizer types
@@ -354,6 +324,36 @@ var myChart = new Chart(ctx, {
 | Status | Suite | Test |
 | ------ | ----- | ---- |
 | ✅ | Code | Must compile |
+
+
+
+### ✅ `/test/errors.test.ts` **0.304s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Errors
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | reviving | Error |
+| ✅ | reviving | TypeError |
+| ✅ | reviving | MyError |
+| ✅ | reviving | MyWarning |
+| ✅ | reviving | 503 Service Unavailable |
+| ✅ | reviving | null |
+
+
+
+### ✅ `/test/destructure.test.ts` **0.235s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Destructuring
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ |  | Invariants |
+| ✅ |  | [Jsonizer.toJSON](): string |
+| ✅ |  | toJSON(): string |
+| ✅ |  | [Jsonizer.toJSON](): object |
 
 
 
