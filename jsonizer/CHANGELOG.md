@@ -1,5 +1,10 @@
 # Jsonizer Changelog
 
+## 6.0.2
+
+* Mappers definition enhancement for array indexes.
+* Bug fix: expect submapper of `"Foo"` to be `{".": "Foo"}`
+
 ## 6.0.1
 
 * Fix packaging.
