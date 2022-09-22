@@ -12,12 +12,12 @@
 
 | Files | 7 | |
 | ----- | -: | - |
-| Lines of code | 1086 | (w/o comments) |
-| Comments | 1065 | (+ 121 with code) |
-| Empty lines | 143 | |
-| **Total lines** | **2294** | (w/o tests) |
+| Lines of code | 1103 | (w/o comments) |
+| Comments | 1069 | (+ 121 with code) |
+| Empty lines | 142 | |
+| **Total lines** | **2314** | (w/o tests) |
 | TODO | 1 | lines |
-| Tests | 2875 | (w/o comments) |
+| Tests | 3088 | (w/o comments) |
 
 <script>
 var ctx = document.getElementById('metricsChart');
@@ -27,10 +27,10 @@ var myChart = new Chart(ctx, {
         labels: ['Code', 'Comments', 'Empty', 'Tests'],
         datasets: [{
             label: 'Metrics',
-            data: [1086, 
-                1065, 
-                143,
-                2875
+            data: [1103, 
+                1069, 
+                142,
+                3088
             ],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -65,43 +65,41 @@ var myChart = new Chart(ctx, {
 |   | Tests suites | Tests |
 | - | ------------ | ----- |
 | ❌ &nbsp; Failed | 0 | 0 |
-| ✅ &nbsp; Passed | 10 | 165 |
+| ✅ &nbsp; Passed | 11 | 169 |
 | ✴ &nbsp; Pending | 0 | 0 |
 | ☢ &nbsp; Error | 0 | |
-| **Total** | **10** | **165** |
+| **Total** | **11** | **169** |
 
 
 
 
-### ✅ `/test/case.rebolon.test.ts` **1.815s**  <!-- {docsify-ignore} -->
+### ✅ `/test/types.test.ts` **6.247s** 🐢 <!-- {docsify-ignore} -->
 
 
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
-
-
-
-### ✅ `/test/case.emmkimme.test.ts` **2.053s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
+#### 🔹 Advanced Jsonizer types
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
-| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
+| ✅ | Code | Must compile |
 
 
 
-### ✅ `/test/readme.test.ts` **2.06s**  <!-- {docsify-ignore} -->
+### ✅ `/test/asynchronizer.test.ts` **6.319s** 🐢 <!-- {docsify-ignore} -->
 
 
-#### 🔹 README.md examples
+#### 🔹 Asynchronizer
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ |  | Parse incoming message |
+| ✅ |  | Parse nested Identity |
+
+
+
+### ✅ `/test/userGuide.test.ts` **6.746s** 🐢 <!-- {docsify-ignore} -->
+
+
+#### 🔹 USER_GUIDE.md examples
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
@@ -146,7 +144,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/basic.test.ts` **0.882s**  <!-- {docsify-ignore} -->
+### ✅ `/test/basic.test.ts` **2.179s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -245,24 +243,32 @@ var myChart = new Chart(ctx, {
 | ✅ |  | Nested `[[[Date]]]` |
 
 
-
-### ✅ `/test/emptyKey.test.ts` **0.759s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Empty object key
+#### 🔹 @Namespace gives a qualified name to classes
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | Stringify with empty key | as the first item |
-| ✅ | Stringify with empty key | as the last item |
-| ✅ | Stringify with empty key | as the single item |
-| ✅ | Stringify with empty key | Invariant |
-| ✅ | Parse with empty key | as the first item |
-| ✅ | Parse with empty key | as the last item |
+| ✅ |  | Chain |
+| ✅ |  | Absolute |
 
 
 
-### ✅ `/test/reviver.test.ts` **0.816s**  <!-- {docsify-ignore} -->
+### ✅ `/test/errors.test.ts` **2.263s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Errors
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | reviving | Error |
+| ✅ | reviving | TypeError |
+| ✅ | reviving | MyError |
+| ✅ | reviving | MyWarning |
+| ✅ | reviving | 503 Service Unavailable |
+| ✅ | reviving | null |
+
+
+
+### ✅ `/test/reviver.test.ts` **2.249s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Operations with Revivers
@@ -311,18 +317,49 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/types.test.ts` **0.671s**  <!-- {docsify-ignore} -->
+### ✅ `/test/destructure.test.ts` **2.055s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 Advanced Jsonizer types
+#### 🔹 Destructuring
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | Code | Must compile |
+| ✅ |  | Invariants |
+| ✅ |  | [Jsonizer.toJSON](): string |
+| ✅ |  | toJSON(): string |
+| ✅ |  | [Jsonizer.toJSON](): object |
 
 
 
-### ✅ `/test/graph.test.ts` **0.676s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.emmkimme.test.ts` **2.021s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Use case (taken from another tool)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
+| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
+
+
+
+### ✅ `/test/emptyKey.test.ts` **2.009s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Empty object key
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Stringify with empty key | as the first item |
+| ✅ | Stringify with empty key | as the last item |
+| ✅ | Stringify with empty key | as the single item |
+| ✅ | Stringify with empty key | Invariant |
+| ✅ | Parse with empty key | as the first item |
+| ✅ | Parse with empty key | as the last item |
+
+
+
+### ✅ `/test/graph.test.ts` **2.169s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Graphs
@@ -338,33 +375,16 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/errors.test.ts` **0.754s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.rebolon.test.ts` **2.079s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 Errors
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | reviving | Error |
-| ✅ | reviving | TypeError |
-| ✅ | reviving | MyError |
-| ✅ | reviving | MyWarning |
-| ✅ | reviving | 503 Service Unavailable |
-| ✅ | reviving | null |
-
-
-
-### ✅ `/test/destructure.test.ts` **0.593s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Destructuring
+#### 🔹 Use case (taken from another tool)
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ |  | Invariants |
-| ✅ |  | [Jsonizer.toJSON](): string |
-| ✅ |  | toJSON(): string |
-| ✅ |  | [Jsonizer.toJSON](): object |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
 
 
 
