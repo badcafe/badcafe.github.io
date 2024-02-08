@@ -12,10 +12,10 @@
 
 | Files | 7 | |
 | ----- | -: | - |
-| Lines of code | 1299 | (w/o comments) |
-| Comments | 1177 | (+ 130 with code) |
-| Empty lines | 163 | |
-| **Total lines** | **2630** | (w/o tests) |
+| Lines of code | 1303 | (w/o comments) |
+| Comments | 1182 | (+ 133 with code) |
+| Empty lines | 165 | |
+| **Total lines** | **2641** | (w/o tests) |
 | TODO | 0 | lines |
 | Tests | 3278 | (w/o comments) |
 
@@ -27,9 +27,9 @@ var myChart = new Chart(ctx, {
         labels: ['Code', 'Comments', 'Empty', 'Tests'],
         datasets: [{
             label: 'Metrics',
-            data: [1299, 
-                1177, 
-                163,
+            data: [1303, 
+                1182, 
+                165,
                 3278
             ],
             backgroundColor: [
@@ -54,19 +54,32 @@ var myChart = new Chart(ctx, {
 });
 </script>
 
+## Exports
+
+**✅ &nbsp; 0 problems**
+
+|Resolution|Kind|
+|----------|----|
+|node10|✅|
+|node16-cjs|✅|
+|node16-esm|✅|
+|bundler|✅|
+
+
 ## Linter
 
-**❌ &nbsp; 6 problems**
+**❌ &nbsp; 7 problems**
 
 
 | File | Position | Severity | Rule | Failure |
 | ---- | --- | -------- | ---- | ------- |
 | `base.ts` | 85,21-35 | 🌧 | no-prototype-builtins | Do not access Object.prototype method 'hasOwnProperty' from target object. |
+| `errors.ts` | 161,30-40 | 🌧 | @typescript-eslint/no-unused-vars | 'err' is defined but never used. |
 | `namespace.ts` | 165,28-42 | 🌧 | no-prototype-builtins | Do not access Object.prototype method 'hasOwnProperty' from target object. |
 | `namespace.ts` | 173,16-30 | 🌧 | no-prototype-builtins | Do not access Object.prototype method 'hasOwnProperty' from target object. |
-| `namespace.ts` | 196,32-46 | 🌧 | no-prototype-builtins | Do not access Object.prototype method 'hasOwnProperty' from target object. |
-| `namespace.ts` | 218,32-46 | 🌧 | no-prototype-builtins | Do not access Object.prototype method 'hasOwnProperty' from target object. |
-| `namespace.ts` | 393,20-29 | 🌧 | prefer-rest-params | Use the rest parameters instead of 'arguments'. |
+| `namespace.ts` | 198,32-46 | 🌧 | no-prototype-builtins | Do not access Object.prototype method 'hasOwnProperty' from target object. |
+| `namespace.ts` | 220,32-46 | 🌧 | no-prototype-builtins | Do not access Object.prototype method 'hasOwnProperty' from target object. |
+| `namespace.ts` | 395,20-29 | 🌧 | prefer-rest-params | Use the rest parameters instead of 'arguments'. |
 
 
 
@@ -83,7 +96,20 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/reviver.test.ts` **2.036s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.rebolon.test.ts` **4.935s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Use case (taken from another tool)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
+
+
+
+### ✅ `/test/reviver.test.ts` **5.021s** 🐢 <!-- {docsify-ignore} -->
 
 
 #### 🔹 Operations with Revivers
@@ -140,7 +166,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/userGuide.test.ts` **2.199s**  <!-- {docsify-ignore} -->
+### ✅ `/test/userGuide.test.ts` **5.132s** 🐢 <!-- {docsify-ignore} -->
 
 
 #### 🔹 USER_GUIDE.md examples
@@ -188,7 +214,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/basic.test.ts` **2.302s**  <!-- {docsify-ignore} -->
+### ✅ `/test/basic.test.ts` **0.446s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -296,31 +322,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/asynchronizer.parsing.test.ts` **0.6s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 [Asynchronizer](https://badcafe.github.io/asynchronizer)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | parsing | Parse incoming message |
-| ✅ | parsing | Parse nested Identity |
-
-
-
-### ✅ `/test/types.test.ts` **0.569s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Advanced Jsonizer types
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Code | Must compile |
-| ✅ | Class | Extend dynamic class |
-
-
-
-### ✅ `/test/graph.test.ts` **0.571s**  <!-- {docsify-ignore} -->
+### ✅ `/test/graph.test.ts` **0.385s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Graphs
@@ -336,7 +338,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/errors.test.ts` **0.545s**  <!-- {docsify-ignore} -->
+### ✅ `/test/errors.test.ts` **0.368s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Errors
@@ -353,59 +355,19 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/case.rebolon.test.ts` **0.618s**  <!-- {docsify-ignore} -->
+### ✅ `/test/types.test.ts` **0.316s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
-
-
-
-### ✅ `/test/case.emmkimme.test.ts` **0.587s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
+#### 🔹 Advanced Jsonizer types
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
-| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
+| ✅ | Code | Must compile |
+| ✅ | Class | Extend dynamic class |
 
 
 
-### ✅ `/test/class.test.ts` **0.453s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Class
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | rename() | w/o ns |
-| ✅ | rename() | with @Namespace |
-| ✅ | Inherit | Parent class is also the namespace |
-| ✅ | Library loaded multiple times | Duplicate |
-| ✅ | Library loaded multiple times | Deduplicate |
-
-
-
-### ✅ `/test/replacer.test.ts` **0.497s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Replacer
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ |  | Capture without JSON.stringify() |
-| ✅ |  | replacer() recursive |
-
-
-
-### ✅ `/test/destructure.test.ts` **0.509s**  <!-- {docsify-ignore} -->
+### ✅ `/test/destructure.test.ts` **0.293s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Destructuring
@@ -419,7 +381,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/emptyKey.test.ts` **0.37s**  <!-- {docsify-ignore} -->
+### ✅ `/test/emptyKey.test.ts` **0.313s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Empty object key
@@ -435,7 +397,46 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/asynchronizer.ns.test.ts` **0.333s**  <!-- {docsify-ignore} -->
+### ✅ `/test/replacer.test.ts` **0.309s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Replacer
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ |  | Capture without JSON.stringify() |
+| ✅ |  | replacer() recursive |
+
+
+
+### ✅ `/test/class.test.ts` **0.354s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Class
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | rename() | w/o ns |
+| ✅ | rename() | with @Namespace |
+| ✅ | Inherit | Parent class is also the namespace |
+| ✅ | Library loaded multiple times | Duplicate |
+| ✅ | Library loaded multiple times | Deduplicate |
+
+
+
+### ✅ `/test/asynchronizer.parsing.test.ts` **0.341s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 [Asynchronizer](https://badcafe.github.io/asynchronizer)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | parsing | Parse incoming message |
+| ✅ | parsing | Parse nested Identity |
+
+
+
+### ✅ `/test/asynchronizer.ns.test.ts` **0.205s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 [Asynchronizer](https://badcafe.github.io/asynchronizer)
@@ -443,6 +444,18 @@ var myChart = new Chart(ctx, {
 | Status | Suite | Test |
 | ------ | ----- | ---- |
 | ✅ | Unordered @Namespace() | with @Type() = on-the-fly classes |
+
+
+
+### ✅ `/test/case.emmkimme.test.ts` **0.293s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Use case (taken from another tool)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
+| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
 
 
 
