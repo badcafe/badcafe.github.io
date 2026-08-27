@@ -111,7 +111,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/types.test.ts` **2.87s**  <!-- {docsify-ignore} -->
+### ✅ `/test/types.test.ts` **2.323s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Advanced Jsonizer types
@@ -123,22 +123,32 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/class.test.ts` **2.869s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.rebolon.test.ts` **2.405s**  <!-- {docsify-ignore} -->
 
 
-#### 🔹 Class
+#### 🔹 Use case (taken from another tool)
 
 | Status | Suite | Test |
 | ------ | ----- | ---- |
-| ✅ | rename() | w/o ns |
-| ✅ | rename() | with @Namespace |
-| ✅ | Inherit | Parent class is also the namespace |
-| ✅ | Library loaded multiple times | Duplicate |
-| ✅ | Library loaded multiple times | Deduplicate |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
+| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
 
 
 
-### ✅ `/test/emptyKey.test.ts` **2.964s**  <!-- {docsify-ignore} -->
+### ✅ `/test/asynchronizer.parsing.test.ts` **2.756s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 [Asynchronizer](https://badcafe.github.io/asynchronizer)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | parsing | Parse incoming message |
+| ✅ | parsing | Parse nested Identity |
+
+
+
+### ✅ `/test/emptyKey.test.ts` **2.764s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Empty object key
@@ -154,7 +164,128 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/basic.test.ts` **2.974s**  <!-- {docsify-ignore} -->
+### ✅ `/test/case.emmkimme.test.ts` **2.793s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Use case (taken from another tool)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
+| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
+
+
+
+### ✅ `/test/class.test.ts` **2.943s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Class
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | rename() | w/o ns |
+| ✅ | rename() | with @Namespace |
+| ✅ | Inherit | Parent class is also the namespace |
+| ✅ | Library loaded multiple times | Duplicate |
+| ✅ | Library loaded multiple times | Deduplicate |
+
+
+
+### ✅ `/test/graph.test.ts` **0.553s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Graphs
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | `JSON.stringify()` | Invariant |
+| ✅ | `JSON.stringify()` | Invariant (realistic) |
+| ✅ | `JSON.stringify()` | Customize `.toJSON()` |
+| ✅ | `JSON.stringify()` | Auto-discard the unwanted field |
+| ✅ | `JSON.parse()` | `ReferenceError` |
+| ✅ | `JSON.parse()` | 👍 |
+
+
+
+### ✅ `/test/reviver.test.ts` **2.96s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Operations with Revivers
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Revive object | stringify reviver |
+| ✅ | Revive object | reviver from JSON |
+| ✅ | Revive object | reviver from replacer |
+| ✅ | Revive class | stringify reviver |
+| ✅ | Revive class | reviver from JSON |
+| ✅ | Revive class | reviver from replacer |
+| ✅ | Revive class with namespace | stringify reviver |
+| ✅ | Revive class with namespace | reviver from JSON |
+| ✅ | Revive class with namespace | reviver from replacer |
+| ✅ | Nested reviver | stringify reviver |
+| ✅ | Revive interface with class | revive interface |
+| ✅ | Revive interface with class | revive {interface[]} |
+| ✅ | Revive interface with class | revive interface[] |
+| ✅ | Revive interface with class | revive interface[0] |
+
+
+#### 🔹 Revivers generation
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Arrays | single item |
+| ✅ | Arrays | 2 items |
+| ✅ | Arrays | 3 items |
+| ✅ | Arrays | n items |
+| ✅ | Deep struct in arrays | single item |
+| ✅ | Deep struct in arrays | 2 items |
+| ✅ | Deep struct in arrays | 3 items |
+| ✅ | Deep struct in arrays | n items |
+| ✅ | Tuple | single mapping |
+| ✅ | Range | [1-2] |
+| ✅ | Range | [1-3] |
+| ✅ | Range | [1-10] |
+| ✅ | Tuple | Mix |
+| ✅ | Ranges | with RegExp inside |
+| ✅ | Submapper | can merge |
+| ✅ | Submapper | with primitive inside |
+| ✅ | Submapper | with primitive before |
+| ✅ | Submapper | with primitive after |
+| ✅ | Merge reviver | Missing mapping after |
+| ✅ | Merge reviver | Missing mapping before |
+| ✅ | Merge reviver | Disjoints mappings |
+| ✅ | Subrevivers | expect submapper of "Foo" to be {".": "Foo"} |
+| ✅ | Subrevivers | submapper gives Jsonizer.Self.Identity |
+
+
+#### 🔹 Use cases
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ |  | .map() to a reviver |
+| ✅ |  | a reviver can handle both an array or an object |
+
+
+
+### ✅ `/test/errors.test.ts` **0.514s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Errors
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | reviving | Error |
+| ✅ | reviving | TypeError |
+| ✅ | reviving | MyError |
+| ✅ | reviving | MyWarning |
+| ✅ | reviving | 503 Service Unavailable |
+| ✅ | reviving | null |
+| ✅ | naming | Class.rename() on existing class |
+
+
+
+### ✅ `/test/basic.test.ts` **3.16s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Stringify with Jsonizer.replacer() gives the expected mapper
@@ -262,122 +393,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/case.emmkimme.test.ts` **3.215s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/emmkimme/json-helpers | Revive busEvent |
-| ✅ | https://github.com/emmkimme/json-helpers | JSON.stringify -> JSON.parse |
-
-
-
-### ✅ `/test/asynchronizer.parsing.test.ts` **3.696s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 [Asynchronizer](https://badcafe.github.io/asynchronizer)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | parsing | Parse incoming message |
-| ✅ | parsing | Parse nested Identity |
-
-
-
-### ✅ `/test/reviver.test.ts` **3.684s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Operations with Revivers
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Revive object | stringify reviver |
-| ✅ | Revive object | reviver from JSON |
-| ✅ | Revive object | reviver from replacer |
-| ✅ | Revive class | stringify reviver |
-| ✅ | Revive class | reviver from JSON |
-| ✅ | Revive class | reviver from replacer |
-| ✅ | Revive class with namespace | stringify reviver |
-| ✅ | Revive class with namespace | reviver from JSON |
-| ✅ | Revive class with namespace | reviver from replacer |
-| ✅ | Nested reviver | stringify reviver |
-| ✅ | Revive interface with class | revive interface |
-| ✅ | Revive interface with class | revive {interface[]} |
-| ✅ | Revive interface with class | revive interface[] |
-| ✅ | Revive interface with class | revive interface[0] |
-
-
-#### 🔹 Revivers generation
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Arrays | single item |
-| ✅ | Arrays | 2 items |
-| ✅ | Arrays | 3 items |
-| ✅ | Arrays | n items |
-| ✅ | Deep struct in arrays | single item |
-| ✅ | Deep struct in arrays | 2 items |
-| ✅ | Deep struct in arrays | 3 items |
-| ✅ | Deep struct in arrays | n items |
-| ✅ | Tuple | single mapping |
-| ✅ | Range | [1-2] |
-| ✅ | Range | [1-3] |
-| ✅ | Range | [1-10] |
-| ✅ | Tuple | Mix |
-| ✅ | Ranges | with RegExp inside |
-| ✅ | Submapper | can merge |
-| ✅ | Submapper | with primitive inside |
-| ✅ | Submapper | with primitive before |
-| ✅ | Submapper | with primitive after |
-| ✅ | Merge reviver | Missing mapping after |
-| ✅ | Merge reviver | Missing mapping before |
-| ✅ | Merge reviver | Disjoints mappings |
-| ✅ | Subrevivers | expect submapper of "Foo" to be {".": "Foo"} |
-| ✅ | Subrevivers | submapper gives Jsonizer.Self.Identity |
-
-
-#### 🔹 Use cases
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ |  | .map() to a reviver |
-| ✅ |  | a reviver can handle both an array or an object |
-
-
-
-### ✅ `/test/case.rebolon.test.ts` **3.919s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Use case (taken from another tool)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive wrapped book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive book |
-| ✅ | https://github.com/Rebolon/json-reviver | Revive books |
-
-
-
-### ✅ `/test/errors.test.ts` **0.865s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Errors
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | reviving | Error |
-| ✅ | reviving | TypeError |
-| ✅ | reviving | MyError |
-| ✅ | reviving | MyWarning |
-| ✅ | reviving | 503 Service Unavailable |
-| ✅ | reviving | null |
-| ✅ | naming | Class.rename() on existing class |
-
-
-
-### ✅ `/test/userGuide.test.ts` **4.033s**  <!-- {docsify-ignore} -->
+### ✅ `/test/userGuide.test.ts` **3.26s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 USER_GUIDE.md examples
@@ -428,7 +444,18 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/tsPlugin.test.ts` **0.853s**  <!-- {docsify-ignore} -->
+### ✅ `/test/asynchronizer.ns.test.ts` **0.4s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 [Asynchronizer](https://badcafe.github.io/asynchronizer)
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ | Unordered @Namespace() | with @Type() = on-the-fly classes |
+
+
+
+### ✅ `/test/tsPlugin.test.ts` **0.634s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 `@badcafe/ts-plugin`
@@ -439,40 +466,7 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/graph.test.ts` **1.046s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Graphs
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | `JSON.stringify()` | Invariant |
-| ✅ | `JSON.stringify()` | Invariant (realistic) |
-| ✅ | `JSON.stringify()` | Customize `.toJSON()` |
-| ✅ | `JSON.stringify()` | Auto-discard the unwanted field |
-| ✅ | `JSON.parse()` | `ReferenceError` |
-| ✅ | `JSON.parse()` | 👍 |
-
-
-
-### ✅ `/test/empty-containers.test.ts` **0.492s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 Stringify arrays holding adjacent empty containers
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ |  | [[],[]] |
-| ✅ |  | [{},{}] |
-| ✅ |  | [[],{}] |
-| ✅ |  | [[],[],true,null] |
-| ✅ |  | [{"d":"2026-08-27T08:46:49.274Z"},[],[]] |
-| ✅ |  | [[],[],{"d":"2026-08-27T08:46:49.274Z"}] |
-| ✅ |  | the mappers of the mapped siblings survive |
-
-
-
-### ✅ `/test/replacer.test.ts` **0.393s**  <!-- {docsify-ignore} -->
+### ✅ `/test/replacer.test.ts` **0.615s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Replacer
@@ -486,7 +480,24 @@ var myChart = new Chart(ctx, {
 
 
 
-### ✅ `/test/destructure.test.ts` **0.393s**  <!-- {docsify-ignore} -->
+### ✅ `/test/empty-containers.test.ts` **0.649s**  <!-- {docsify-ignore} -->
+
+
+#### 🔹 Stringify arrays holding adjacent empty containers
+
+| Status | Suite | Test |
+| ------ | ----- | ---- |
+| ✅ |  | [[],[]] |
+| ✅ |  | [{},{}] |
+| ✅ |  | [[],{}] |
+| ✅ |  | [[],[],true,null] |
+| ✅ |  | [{"d":"2026-08-27T09:27:39.364Z"},[],[]] |
+| ✅ |  | [[],[],{"d":"2026-08-27T09:27:39.364Z"}] |
+| ✅ |  | the mappers of the mapped siblings survive |
+
+
+
+### ✅ `/test/destructure.test.ts` **0.456s**  <!-- {docsify-ignore} -->
 
 
 #### 🔹 Destructuring
@@ -497,17 +508,6 @@ var myChart = new Chart(ctx, {
 | ✅ |  | [Jsonizer.toJSON](): string |
 | ✅ |  | toJSON(): string |
 | ✅ |  | [Jsonizer.toJSON](): object |
-
-
-
-### ✅ `/test/asynchronizer.ns.test.ts` **0.375s**  <!-- {docsify-ignore} -->
-
-
-#### 🔹 [Asynchronizer](https://badcafe.github.io/asynchronizer)
-
-| Status | Suite | Test |
-| ------ | ----- | ---- |
-| ✅ | Unordered @Namespace() | with @Type() = on-the-fly classes |
 
 
 
